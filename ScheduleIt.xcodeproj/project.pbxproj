@@ -22,6 +22,7 @@
 		16DE4D9B18BEC9FD00FF96A2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7F18BEC9FD00FF96A2 /* CoreData.framework */; };
 		16DE4DA318BEC9FD00FF96A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DA118BEC9FD00FF96A2 /* InfoPlist.strings */; };
 		16DE4DA518BEC9FD00FF96A2 /* ScheduleItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DA418BEC9FD00FF96A2 /* ScheduleItTests.m */; };
+		16DE4DB618BECAB300FF96A2 /* CWFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		16DE4DA018BEC9FD00FF96A2 /* ScheduleItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScheduleItTests-Info.plist"; sourceTree = "<group>"; };
 		16DE4DA218BEC9FD00FF96A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16DE4DA418BEC9FD00FF96A2 /* ScheduleItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleItTests.m; sourceTree = "<group>"; };
+		16DE4DB418BECAB300FF96A2 /* CWFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlatButton.h; sourceTree = "<group>"; };
+		16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlatButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +118,10 @@
 		16DE4D8118BEC9FD00FF96A2 /* ScheduleIt */ = {
 			isa = PBXGroup;
 			children = (
-				16DE4D8A18BEC9FD00FF96A2 /* AppDelegate.h */,
-				16DE4D8B18BEC9FD00FF96A2 /* AppDelegate.m */,
-				16DE4D9018BEC9FD00FF96A2 /* Images.xcassets */,
-				16DE4D8D18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld */,
+				16DE4DB118BECA3E00FF96A2 /* Base */,
+				16DE4DB018BECA3700FF96A2 /* Controllers */,
+				16DE4DAF18BECA2F00FF96A2 /* Domain */,
+				16DE4DAE18BECA1000FF96A2 /* Classes */,
 				16DE4D8218BEC9FD00FF96A2 /* Supporting Files */,
 			);
 			path = ScheduleIt;
@@ -151,6 +154,48 @@
 				16DE4DA118BEC9FD00FF96A2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16DE4DAE18BECA1000FF96A2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16DE4DB218BECAB300FF96A2 /* CWFlatButton */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		16DE4DAF18BECA2F00FF96A2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		16DE4DB018BECA3700FF96A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		16DE4DB118BECA3E00FF96A2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				16DE4D8A18BEC9FD00FF96A2 /* AppDelegate.h */,
+				16DE4D8B18BEC9FD00FF96A2 /* AppDelegate.m */,
+				16DE4D9018BEC9FD00FF96A2 /* Images.xcassets */,
+				16DE4D8D18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		16DE4DB218BECAB300FF96A2 /* CWFlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				16DE4DB418BECAB300FF96A2 /* CWFlatButton.h */,
+				16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */,
+			);
+			path = CWFlatButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +295,7 @@
 			files = (
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
+				16DE4DB618BECAB300FF96A2 /* CWFlatButton.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
