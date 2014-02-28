@@ -15,12 +15,14 @@ typedef enum{
     kCWButtonStatePressed
 }kCWButtonState;
 
-
+@protocol CWFlatButtonDelegate;
 
 @interface CWFlatButton : UIView{
+    id<CWFlatButtonDelegate> delegate;
     UILabel* textLable;
 }
 
+@property(nonatomic, strong)id<CWFlatButtonDelegate> delegate;
 @property(nonatomic, strong)UIColor* buttonStateNormalColor;
 @property(nonatomic, strong)UIColor* buttonStatePressedColor;
 @property(nonatomic, strong)UIColor* textStateNormalColor;
@@ -35,5 +37,11 @@ typedef enum{
 - (void)setButtonColor:(UIColor*)color forState:(kCWButtonState)state;
 - (void)setBorderColor:(UIColor*)color forState:(kCWButtonState)state;
 - (void)setFrame:(CGRect)frame;
+
+@end
+
+@protocol CWFlatButtonDelegate <NSObject>
+
+-(void)buttonWasPressed;
 
 @end

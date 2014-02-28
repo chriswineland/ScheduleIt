@@ -10,12 +10,14 @@
 
 @implementation CWFlatButton
 
+@synthesize delegate;
+
 #pragma mark - defines
 
-#define BUTTON_STATE_NORMAL_COLOR   [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define BUTTON_STATE_NORMAL_COLOR   [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0]
 #define BUTTON_STATE_PRESSED_COLOR  [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
 #define TEXT_STATE_NORMAL_COLOR     [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
-#define TEXT_STATE_PRESSED_COLOR    [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define TEXT_STATE_PRESSED_COLOR    [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0]
 #define BORDER_STATE_NORMAL_COLOR   [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
 #define BORDER_STATE_PRESSED_COLOR  [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
 
@@ -52,7 +54,9 @@
 #pragma mark - button accessors
 
 - (void)setFrame:(CGRect)frame{
-    
+    [super setFrame:frame];
+    [textLable setCenter:[self center]];
+    [self drawBoarderWithColor:self.borderStateNormalColor];
 }
 
 - (void)setFontColor:(UIColor*)color forState:(kCWButtonState)state{
@@ -131,9 +135,8 @@
     [self setBackgroundColor:self.buttonStateNormalColor];
     [textLable setTextColor:self.textStateNormalColor];
     [self drawBoarderWithColor:self.borderStateNormalColor];
+    [delegate buttonWasPressed];
 }
-
-#pragma mark - button delegates
 
 #pragma mark - helper functions
 
@@ -144,6 +147,28 @@
     self.textStatePressedColor = TEXT_STATE_PRESSED_COLOR;
     self.borderStateNormalColor = BORDER_STATE_NORMAL_COLOR;
     self.borderStatePressedColor = BORDER_STATE_PRESSED_COLOR;
+}
+
+- (void)updateUIColorsWithState:(kCWButtonState)state{
+    switch (state) {
+        case kCWButtonStateNormal:
+        {
+            
+        }
+            break;
+        case kCWButtonStatePressed:
+        {
+            
+        }
+            break;
+        default:
+        {
+            [self initializeDefaultButtonColors];
+            [self updateUIColorsWithState:kCWButtonStateNormal];
+        }
+            break;
+    }
+
 }
 
 - (void)drawBoarderWithColor:(UIColor*)color{

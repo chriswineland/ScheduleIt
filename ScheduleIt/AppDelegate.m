@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SignInViewController.h"
 
 @implementation AppDelegate
 
@@ -20,6 +21,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    SignInViewController* signIn = [[SignInViewController alloc]init];
+    [[self window]setRootViewController:signIn];
     return YES;
 }
 
