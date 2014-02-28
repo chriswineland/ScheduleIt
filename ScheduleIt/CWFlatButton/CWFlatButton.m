@@ -10,6 +10,15 @@
 
 @implementation CWFlatButton
 
+#pragma mark - defines
+
+#define BUTTON_STATE_NORMAL_COLOR   [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define BUTTON_STATE_PRESSED_COLOR  [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define TEXT_STATE_NORMAL_COLOR     [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define TEXT_STATE_PRESSED_COLOR    [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define BORDER_STATE_NORMAL_COLOR   [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+#define BORDER_STATE_PRESSED_COLOR  [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
+
 #pragma mark - init
 
 - (id)init{
@@ -24,71 +33,16 @@
 
 - (id)initWithFrame:(CGRect)frame andText:(NSString *)text{
     if(self = [super initWithFrame:frame]){
-        //set the text labels frame here as well
-        self.textLable = [[UILabel alloc]initWithFrame:frame];
-        [self.textLable setBackgroundColor:[UIColor clearColor]];
-        [self.textLable setText:text];
-        [self addSubview:self.textLable];
+        [self setUserInteractionEnabled:YES];
+        
+        textLable = [[UILabel alloc]initWithFrame:frame];
+        [textLable setBackgroundColor:[UIColor clearColor]];
+        [textLable setText:text];
+        [self addSubview:textLable];
+        
+        [self initializeDefaultButtonColors];
     }
     return self;
-}
-
-#pragma mark - lable accessors
-
-- (void)setText:(NSString*)text{
-    [self.textLable setText:text];
-}
-
-- (void)setFont:(UIFont*)font{
-    [self.textLable setFont:font];
-}
-
-- (void)setNumberOfLines:(NSInteger)lines{
-    [self.textLable setNumberOfLines:lines];
-}
-
-- (void)setVerticalTextAlignment:(kVerticalAlignment)vAlignment{
-    switch (vAlignment) {
-        case kTopVerticalAligned:
-        {
-        
-        }
-            break;
-        case kCenterVerticalAligned:
-        {
-            
-        }
-            break;
-        case kBottomVerticalAligned:
-        {
-            
-        }
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)setHorizontalTextAlignment:(kHorizontalAlignment)hAlignment{
-    switch (hAlignment) {
-        case kLeftHorizontalAligned:
-        {
-            
-        }
-            break;
-        case kCenterHorizontalAligned:
-        {
-            
-        }
-            break;
-        case kRightHorizontalAligned:
-        {
-            
-        }
-            break;
-        default:
-            break;
-    }
 }
 
 #pragma mark - button accessors
@@ -131,8 +85,57 @@
     }
 }
 
+- (void)setBorderColor:(UIColor*)color forState:(kCWButtonState)state{
+    switch (state) {
+        case kCWButtonStateNormal:
+        {
+            
+        }
+            break;
+        case kCWButtonStatePressed:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
 #pragma mark - button action functions
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    //check to make sure the touch is inside the button
+}
 
 #pragma mark - button delegates
 
+#pragma mark - helper functions
+
+- (void)initializeDefaultButtonColors{
+    self.buttonStateNormalColor = BUTTON_STATE_NORMAL_COLOR;
+    self.buttonStatePressedColor = BUTTON_STATE_PRESSED_COLOR;
+    self.textStateNormalColor = TEXT_STATE_NORMAL_COLOR;
+    self.textStatePressedColor = TEXT_STATE_PRESSED_COLOR;
+    self.borderStateNormalColor = BORDER_STATE_NORMAL_COLOR;
+    self.borderStatePressedColor = BORDER_STATE_PRESSED_COLOR;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+

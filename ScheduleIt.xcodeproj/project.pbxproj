@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
 		16DE4D7E18BEC9FD00FF96A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7D18BEC9FD00FF96A2 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FF88BD118C1038100F08CA9 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				0FF88BD218C103EA00F08CA9 /* SignInViewController.h */,
+				0FF88BD318C103EA00F08CA9 /* SignInViewController.m */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
 		16DE4D6D18BEC9FD00FF96A2 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		16DE4DB018BECA3700FF96A2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0FF88BD118C1038100F08CA9 /* SignIn */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -312,6 +325,7 @@
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
 				16DE4DB618BECAB300FF96A2 /* CWFlatButton.m in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
+				0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

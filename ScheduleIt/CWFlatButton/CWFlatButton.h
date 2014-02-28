@@ -9,17 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef enum{
-    kTopVerticalAligned,
-    kCenterVerticalAligned,
-    kBottomVerticalAligned
-}kVerticalAlignment;
-
-typedef enum{
-    kLeftHorizontalAligned,
-    kCenterHorizontalAligned,
-    kRightHorizontalAligned
-}kHorizontalAlignment;
 
 typedef enum{
     kCWButtonStateNormal,
@@ -29,22 +18,22 @@ typedef enum{
 
 
 @interface CWFlatButton : UIView{
-    kVerticalAlignment verticalTextAlignment;
-    kHorizontalAlignment horizontalTextAlignment;
+    UILabel* textLable;
 }
 
-@property(nonatomic, strong)UILabel* textLable;
+@property(nonatomic, strong)UIColor* buttonStateNormalColor;
+@property(nonatomic, strong)UIColor* buttonStatePressedColor;
+@property(nonatomic, strong)UIColor* textStateNormalColor;
+@property(nonatomic, strong)UIColor* textStatePressedColor;
+@property(nonatomic, strong)UIColor* borderStateNormalColor;
+@property(nonatomic, strong)UIColor* borderStatePressedColor;
 
 - (id)init;
 - (id)initWithFrame:(CGRect)frame;
 - (id)initWithFrame:(CGRect)frame andText:(NSString*)text;
 - (void)setFontColor:(UIColor*)color forState:(kCWButtonState)state;
 - (void)setButtonColor:(UIColor*)color forState:(kCWButtonState)state;
-- (void)setText:(NSString*)text;
-- (void)setFont:(UIFont*)font;
-- (void)setNumberOfLines:(NSInteger)lines;
-- (void)setVerticalTextAlignment:(kVerticalAlignment)vAlignment;
-- (void)setHorizontalTextAlignment:(kHorizontalAlignment)hAlignment;
+- (void)setBorderColor:(UIColor*)color forState:(kCWButtonState)state;
 - (void)setFrame:(CGRect)frame;
 
 @end
