@@ -37,7 +37,11 @@
         
         textLable = [[UILabel alloc]initWithFrame:frame];
         [textLable setBackgroundColor:[UIColor clearColor]];
+        [textLable setTextAlignment:NSTextAlignmentCenter];
+        [textLable setNumberOfLines:0];
         [textLable setText:text];
+        [textLable sizeToFit];
+        [textLable setCenter:[self center]];
         [self addSubview:textLable];
         
         [self initializeDefaultButtonColors];
@@ -55,15 +59,19 @@
     switch (state) {
         case kCWButtonStateNormal:
         {
-            
+            self.textStateNormalColor = color;
         }
             break;
         case kCWButtonStatePressed:
         {
-            
+            self.textStatePressedColor = color;
         }
             break;
         default:
+        {
+            self.textStateNormalColor = TEXT_STATE_NORMAL_COLOR;
+            self.textStatePressedColor = TEXT_STATE_PRESSED_COLOR;
+        }
             break;
     }
 }
@@ -72,15 +80,19 @@
     switch (state) {
         case kCWButtonStateNormal:
         {
-            
+            self.buttonStateNormalColor = color;
         }
             break;
         case kCWButtonStatePressed:
         {
-            
+            self.buttonStatePressedColor = color;
         }
             break;
         default:
+        {
+            self.buttonStateNormalColor = BUTTON_STATE_NORMAL_COLOR;
+            self.buttonStatePressedColor = BUTTON_STATE_PRESSED_COLOR;
+        }
             break;
     }
 }
@@ -89,15 +101,19 @@
     switch (state) {
         case kCWButtonStateNormal:
         {
-            
+            self.borderStateNormalColor = color;
         }
             break;
         case kCWButtonStatePressed:
         {
-            
+            self.borderStatePressedColor = color;
         }
             break;
         default:
+        {
+            self.borderStateNormalColor = BORDER_STATE_NORMAL_COLOR;
+            self.borderStatePressedColor = BORDER_STATE_PRESSED_COLOR;
+        }
             break;
     }
 }
@@ -106,11 +122,15 @@
 #pragma mark - button action functions
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    
+    [self setBackgroundColor:self.buttonStatePressedColor];
+    [textLable setTextColor:self.textStatePressedColor];
+    [self drawBoarderWithColor:self.borderStatePressedColor];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    //check to make sure the touch is inside the button
+    [self setBackgroundColor:self.buttonStateNormalColor];
+    [textLable setTextColor:self.textStateNormalColor];
+    [self drawBoarderWithColor:self.borderStateNormalColor];
 }
 
 #pragma mark - button delegates
@@ -124,6 +144,10 @@
     self.textStatePressedColor = TEXT_STATE_PRESSED_COLOR;
     self.borderStateNormalColor = BORDER_STATE_NORMAL_COLOR;
     self.borderStatePressedColor = BORDER_STATE_PRESSED_COLOR;
+}
+
+- (void)drawBoarderWithColor:(UIColor*)color{
+    
 }
 
 @end
