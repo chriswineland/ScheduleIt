@@ -19,6 +19,7 @@
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         screenHeight = screenRect.size.height;
         screenWidth = screenRect.size.width;
+        [[self view]setBackgroundColor:backGroundOffWhite];
     }
     return self;
 }

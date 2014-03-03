@@ -20,12 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIScrollView* contentView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-    [contentView setScrollEnabled:YES];
-    [contentView setBounces:YES];
-    [contentView setAlwaysBounceVertical:YES];
-    [contentView setDelaysContentTouches:NO];
-    [contentView setBackgroundColor:[UIColor whiteColor]];
+    SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
     SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
