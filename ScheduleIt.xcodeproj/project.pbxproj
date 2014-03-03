@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E4018C4FCE700F7F005 /* SIButton.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		16DE4D9B18BEC9FD00FF96A2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7F18BEC9FD00FF96A2 /* CoreData.framework */; };
 		16DE4DA318BEC9FD00FF96A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DA118BEC9FD00FF96A2 /* InfoPlist.strings */; };
 		16DE4DA518BEC9FD00FF96A2 /* ScheduleItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DA418BEC9FD00FF96A2 /* ScheduleItTests.m */; };
-		16DE4DB618BECAB300FF96A2 /* CWFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */; };
 		16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2E6E3F18C4FCE700F7F005 /* SIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIButton.h; sourceTree = "<group>"; };
+		0F2E6E4018C4FCE700F7F005 /* SIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIButton.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +60,6 @@
 		16DE4DA018BEC9FD00FF96A2 /* ScheduleItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScheduleItTests-Info.plist"; sourceTree = "<group>"; };
 		16DE4DA218BEC9FD00FF96A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16DE4DA418BEC9FD00FF96A2 /* ScheduleItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleItTests.m; sourceTree = "<group>"; };
-		16DE4DB418BECAB300FF96A2 /* CWFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlatButton.h; sourceTree = "<group>"; };
-		16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlatButton.m; sourceTree = "<group>"; };
 		16DE4DB818BECEFE00FF96A2 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
 		16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
 		16DE4DBB18BECFEB00FF96A2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -176,7 +176,8 @@
 		16DE4DAE18BECA1000FF96A2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				16DE4DB218BECAB300FF96A2 /* CWFlatButton */,
+				0F2E6E3F18C4FCE700F7F005 /* SIButton.h */,
+				0F2E6E4018C4FCE700F7F005 /* SIButton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -205,15 +206,6 @@
 				16DE4D8D18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		16DE4DB218BECAB300FF96A2 /* CWFlatButton */ = {
-			isa = PBXGroup;
-			children = (
-				16DE4DB418BECAB300FF96A2 /* CWFlatButton.h */,
-				16DE4DB518BECAB300FF96A2 /* CWFlatButton.m */,
-			);
-			path = CWFlatButton;
 			sourceTree = "<group>";
 		};
 		16DE4DB718BECDD300FF96A2 /* Shared */ = {
@@ -322,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
+				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
-				16DE4DB618BECAB300FF96A2 /* CWFlatButton.m in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
 				0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,

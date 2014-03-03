@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BackgroundViewController.h"
-#import "CWFlatButton.h"
 
 @interface SignInViewController : BackgroundViewController{
-    CWFlatButton* signInButton;
-    CWFlatButton* signUpButton;
+    SIButton* signInButton;
+    SIButton* signUpButton;
 }
 
 @end

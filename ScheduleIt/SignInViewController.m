@@ -20,15 +20,25 @@
     UIScrollView* contentView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     [contentView setScrollEnabled:YES];
     [contentView setBounces:YES];
-    [contentView setBackgroundColor:[UIColor orangeColor]];
+    [contentView setAlwaysBounceVertical:YES];
+    [contentView setDelaysContentTouches:NO];
+    [contentView setBackgroundColor:[UIColor whiteColor]];
     
-	signInButton = [[CWFlatButton alloc]initWithFrame:CGRectMake(50, 50, 150, 40) andText:@"Sign In"];
+    signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, 45) andButtonType:kSIButtonTypePosative];
+    [signInButton setTitle:@"Sign In"];
     [contentView addSubview:signInButton];
     
-    signUpButton = [[CWFlatButton alloc]initWithFrame:CGRectMake(50, 95, 150, 40) andText:@"Sign Up"];
+    signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 205, screenWidth, 45) andButtonType:kSIButtonTypeNegative];
+    [signUpButton setTitle:@"Sigh Up"];
     [contentView addSubview:signUpButton];
     
     [[self view]addSubview:contentView];
+}
+
+#pragma mark - Button Actions
+
+- (void)signInAction:(id)sender{
+    
 }
 
 @end
