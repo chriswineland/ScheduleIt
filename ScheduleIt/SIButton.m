@@ -7,11 +7,7 @@
 //
 
 #import "SIButton.h"
-
-#define button_type_posative_button_color   [UIColor blueColor]
-#define button_type_negateve_button_color   [UIColor darkGrayColor]
-#define button_state_normal_text_color      [UIColor whiteColor]
-#define button_state_highlighted_text_color [UIColor blackColor]
+#import "Constants.h"
 
 #define button_font_type                    [UIFont boldSystemFontOfSize:16]
 
@@ -33,25 +29,25 @@
     if (self) {
         [self setButType:type];
         
-        [self setTitleColor:button_state_normal_text_color forState:UIControlStateNormal];
-        [self setTitleColor:button_state_highlighted_text_color forState:UIControlStateHighlighted];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self setTitleColor:complementColor1 forState:UIControlStateHighlighted];
         [[self titleLabel]setFont:button_font_type];
         [self addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
         
         switch (self.butType) {
             case kSIButtonTypePosative:
             {
-                [self setBackgroundColor:button_type_posative_button_color];
+                [self setBackgroundColor:primaryColor1];
             }
                 break;
             case kSIButtonTypeNegative:
             {
-                [self setBackgroundColor:button_type_negateve_button_color];
+                [self setBackgroundColor:primaryColor3];
             }
                 break;
             default:
             {
-                [self setBackgroundColor:button_type_posative_button_color];
+                [self setBackgroundColor:primaryColor1];
             }
                 break;
         }

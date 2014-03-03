@@ -21,8 +21,19 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     SignInViewController* signIn = [[SignInViewController alloc]init];
-    [[self window]setRootViewController:signIn];
+    
+    UINavigationController* navController = [[UINavigationController alloc]initWithRootViewController:signIn];
+    [[navController navigationBar] setBarTintColor:primaryColor1];
+    [navController.navigationBar setTitleTextAttributes:@{
+                                                          NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                          }];
+    
+    [[self window]setRootViewController:navController];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 

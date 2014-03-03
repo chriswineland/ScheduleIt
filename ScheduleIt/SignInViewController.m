@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self navigationItem]setTitle:@"Schedule It"];
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
     SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypePosative];

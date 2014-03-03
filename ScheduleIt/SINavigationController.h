@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SINavigationController : UINavigationController
+
+@interface SINavigationController : UINavigationController{
+
+}
 
 @end

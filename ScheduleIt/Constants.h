@@ -11,7 +11,7 @@
 
 #define RGB(r, g, b)		[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
-#define backGroundOffWhite  RGB(249,247,244)
+#define backGroundOffWhite       RGB(249,247,244)
 #define primaryColor1            RGB(22,46,174)
 #define primaryColor2            RGB(74,96,215)
 #define primaryColor3            RGB(112,128,215)
