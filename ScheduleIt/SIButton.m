@@ -17,6 +17,8 @@
 
 @implementation SIButton
 
+@synthesize delegate, butType;
+
 - (id)init{
     return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
 }
@@ -34,6 +36,7 @@
         [self setTitleColor:button_state_normal_text_color forState:UIControlStateNormal];
         [self setTitleColor:button_state_highlighted_text_color forState:UIControlStateHighlighted];
         [[self titleLabel]setFont:button_font_type];
+        [self addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
         
         switch (self.butType) {
             case kSIButtonTypePosative:
@@ -57,9 +60,15 @@
     return self;
 }
 
+#pragma mark - helper functions
+
 - (void)setTitle:(NSString*)title{
     [self setTitle:title forState:UIControlStateNormal];
     [self setTitle:title forState:UIControlStateHighlighted];
+}
+
+- (void)buttonPress:(id)sender{
+    [delegate siButtonWasPressed:self];
 }
 
 @end

@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (CGFloat)verticalFrameOffsetOfUIElement:(UIView*)view{
+    return view.frame.origin.y + view.frame.size.height;
+}
+
 @end

@@ -8,6 +8,9 @@
 
 #import "SignInViewController.h"
 
+#define SIGNINBUTTONTAG 1
+#define SIGNUPBUTTONTAG 2
+
 @interface SignInViewController ()
 
 @end
@@ -24,21 +27,29 @@
     [contentView setDelaysContentTouches:NO];
     [contentView setBackgroundColor:[UIColor whiteColor]];
     
-    signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, 45) andButtonType:kSIButtonTypePosative];
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
+    [signInButton setTag:SIGNINBUTTONTAG];
+    [signInButton setDelegate:self];
     [contentView addSubview:signInButton];
     
-    signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 205, screenWidth, 45) andButtonType:kSIButtonTypeNegative];
+    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, [self verticalFrameOffsetOfUIElement:signInButton] + BUTTON_GAP, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypeNegative];
     [signUpButton setTitle:@"Sigh Up"];
+    [signUpButton setTag:SIGNUPBUTTONTAG];
+    [signUpButton setDelegate:self];
     [contentView addSubview:signUpButton];
     
     [[self view]addSubview:contentView];
 }
 
-#pragma mark - Button Actions
+#pragma mark - SIButton Delegate
 
-- (void)signInAction:(id)sender{
-    
+- (void)siButtonWasPressed:(id)sender{
+    if([sender tag] == SIGNINBUTTONTAG){
+        
+    }else if ([sender tag] == SIGNUPBUTTONTAG){
+        
+    }
 }
 
 @end

@@ -14,4 +14,6 @@
     CGFloat screenHeight;
 }
 
+- (CGFloat)verticalFrameOffsetOfUIElement:(UIView*)view;
+
 @end

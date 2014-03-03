@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BackgroundViewController.h"
 
-@interface SignInViewController : BackgroundViewController{
-    SIButton* signInButton;
-    SIButton* signUpButton;
+@interface SignInViewController : BackgroundViewController<SIButtonDelegate>{
+
 }
 
 @end
