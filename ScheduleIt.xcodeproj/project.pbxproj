@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E4018C4FCE700F7F005 /* SIButton.m */; };
 		0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E4618C5135700F7F005 /* SIScrollView.m */; };
-		0F2E6E4A18C5138600F7F005 /* SINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E4918C5138600F7F005 /* SINavigationController.m */; };
+		0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */; };
+		0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5818C5533000F7F005 /* SILabelHeader.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -44,8 +45,10 @@
 		0F2E6E4018C4FCE700F7F005 /* SIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIButton.m; sourceTree = "<group>"; };
 		0F2E6E4518C5135700F7F005 /* SIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIScrollView.h; sourceTree = "<group>"; };
 		0F2E6E4618C5135700F7F005 /* SIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIScrollView.m; sourceTree = "<group>"; };
-		0F2E6E4818C5138600F7F005 /* SINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SINavigationController.h; sourceTree = "<group>"; };
-		0F2E6E4918C5138600F7F005 /* SINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SINavigationController.m; sourceTree = "<group>"; };
+		0F2E6E5418C5530800F7F005 /* SILabelTextBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SILabelTextBlock.h; sourceTree = "<group>"; };
+		0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SILabelTextBlock.m; sourceTree = "<group>"; };
+		0F2E6E5718C5533000F7F005 /* SILabelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SILabelHeader.h; sourceTree = "<group>"; };
+		0F2E6E5818C5533000F7F005 /* SILabelHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SILabelHeader.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,13 +118,22 @@
 			name = ScrollView;
 			sourceTree = "<group>";
 		};
-		0F2E6E4418C5132E00F7F005 /* NavController */ = {
+		0F2E6E4F18C5519E00F7F005 /* Label */ = {
 			isa = PBXGroup;
 			children = (
-				0F2E6E4818C5138600F7F005 /* SINavigationController.h */,
-				0F2E6E4918C5138600F7F005 /* SINavigationController.m */,
+				0F2E6E5418C5530800F7F005 /* SILabelTextBlock.h */,
+				0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */,
+				0F2E6E5718C5533000F7F005 /* SILabelHeader.h */,
+				0F2E6E5818C5533000F7F005 /* SILabelHeader.m */,
 			);
-			name = NavController;
+			name = Label;
+			sourceTree = "<group>";
+		};
+		0F2E6E5018C551C100F7F005 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TextField;
 			sourceTree = "<group>";
 		};
 		0FF88BD118C1038100F08CA9 /* SignIn */ = {
@@ -209,7 +221,8 @@
 		16DE4DAE18BECA1000FF96A2 /* CustomizedClasses */ = {
 			isa = PBXGroup;
 			children = (
-				0F2E6E4418C5132E00F7F005 /* NavController */,
+				0F2E6E5018C551C100F7F005 /* TextField */,
+				0F2E6E4F18C5519E00F7F005 /* Label */,
 				0F2E6E4318C5132400F7F005 /* ScrollView */,
 				0F2E6E4218C5131700F7F005 /* Button */,
 			);
@@ -350,11 +363,12 @@
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
 				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
-				0F2E6E4A18C5138600F7F005 /* SINavigationController.m in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
+				0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */,
 				0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */,
 				0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,
+				0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

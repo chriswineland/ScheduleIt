@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BackgroundViewController.h"
+#import "SIButton.h"
+#import "SIScrollView.h"
 
 @interface SignInViewController : BackgroundViewController<SIButtonDelegate>{
 

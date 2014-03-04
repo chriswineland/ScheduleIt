@@ -9,7 +9,7 @@
 #import "SIButton.h"
 #import "Constants.h"
 
-#define button_font_type                    [UIFont boldSystemFontOfSize:16]
+#define button_font_type    [UIFont boldSystemFontOfSize:16]
 
 @implementation SIButton
 

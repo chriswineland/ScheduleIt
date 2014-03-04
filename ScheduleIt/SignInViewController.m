@@ -23,13 +23,19 @@
     [[self navigationItem]setTitle:@"Schedule It"];
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
-    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypePosative];
+    UITextField* uidTextField = [[UITextField alloc]initWithFrame:CGRectMake(horizantalBorderWidth, 45, screenWidth-(horizantalBorderWidth*2), textFieldHeight)];
+    [uidTextField setBorderStyle:UITextBorderStyleBezel];
+    [uidTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+    [uidTextField setSpellCheckingType:UITextSpellCheckingTypeNo];
+    [contentView addSubview:uidTextField];
+    
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, buttonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
     [signInButton setTag:SIGNINBUTTONTAG];
     [signInButton setDelegate:self];
     [contentView addSubview:signInButton];
     
-    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, [self verticalFrameOffsetOfUIElement:signInButton] + BUTTON_GAP, screenWidth, BUTTON_HEIGHT) andButtonType:kSIButtonTypeNegative];
+    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, [self verticalFrameOffsetOfUIElement:signInButton] + buttonGap, screenWidth, buttonHeight) andButtonType:kSIButtonTypeNegative];
     [signUpButton setTitle:@"Sigh Up"];
     [signUpButton setTag:SIGNUPBUTTONTAG];
     [signUpButton setDelegate:self];

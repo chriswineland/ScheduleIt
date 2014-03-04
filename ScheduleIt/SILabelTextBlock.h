@@ -1,5 +1,5 @@
 //
-//  SINavigationController.h
+//  SILabelTextBlock.h
 //  ScheduleIt
 //
 //  Created by Chris Wineland on 3/3/14.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define buttonHeight            40
+#define buttonGap               3
 
-@interface SINavigationController : UINavigationController{
-
-}
+@interface SILabelTextBlock : UILabel
 
 @end
