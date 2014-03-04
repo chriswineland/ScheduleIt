@@ -43,7 +43,7 @@
 }
 
 - (void)postAcknoledgmentFinnishedMoveUpAction:(SIPostAcknoledgement*)posack{
-    
+    [[AppSessionContext singleton]setIsDisplayingError:NO];
 }
 
 -(void)postAcknoledgmentWasTapped:(SIPostAcknoledgement*)posack{
@@ -58,7 +58,9 @@
 
 - (void)handleError:(SIError*)error{
     if (error == nil) return;
+    if([[AppSessionContext singleton]isDisplayingError]) return;
     
+    [[AppSessionContext singleton]setIsDisplayingError:YES];
     SIPostAcknoledgement* posack = [[SIPostAcknoledgement alloc]initWithMessage:[error dereferanceCodeToErrorMessage]];
     [[self view]addSubview:posack];
     [posack setDelegate:self];

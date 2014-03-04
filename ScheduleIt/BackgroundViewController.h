@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "Global.h"
 #import "SIError.h"
 #import "SIPostAcknoledgement.h"
 

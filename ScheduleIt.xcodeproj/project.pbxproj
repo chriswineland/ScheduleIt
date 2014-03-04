@@ -13,6 +13,8 @@
 		0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5818C5533000F7F005 /* SILabelHeader.m */; };
 		0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */; };
 		0F2E6E6118C646EC00F7F005 /* messaging_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */; };
+		0F2E6E6718C68C4800F7F005 /* UserSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */; };
+		0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -56,6 +58,11 @@
 		0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIPostAcknoledgement.h; sourceTree = "<group>"; };
 		0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIPostAcknoledgement.m; sourceTree = "<group>"; };
 		0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messaging_error@2x.png"; sourceTree = "<group>"; };
+		0F2E6E6518C68C4800F7F005 /* UserSessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSessionContext.h; sourceTree = "<group>"; };
+		0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSessionContext.m; sourceTree = "<group>"; };
+		0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSessionContext.h; sourceTree = "<group>"; };
+		0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSessionContext.m; sourceTree = "<group>"; };
+		0F2E6E6E18C6911C00F7F005 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +279,10 @@
 			children = (
 				16DE4DC018C599EE00FF96A2 /* SIError.h */,
 				16DE4DC118C599EE00FF96A2 /* SIError.m */,
+				0F2E6E6518C68C4800F7F005 /* UserSessionContext.h */,
+				0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */,
+				0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */,
+				0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -300,6 +311,7 @@
 			children = (
 				16DE4DB818BECEFE00FF96A2 /* BackgroundViewController.h */,
 				16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */,
+				0F2E6E6E18C6911C00F7F005 /* Global.h */,
 				16DE4DBB18BECFEB00FF96A2 /* Constants.h */,
 				0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */,
 				0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */,
@@ -403,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */,
 				16DE4DC218C599EE00FF96A2 /* SIError.m in Sources */,
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
 				16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */,
@@ -415,6 +428,7 @@
 				0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,
 				0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */,
+				0F2E6E6718C68C4800F7F005 /* UserSessionContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
