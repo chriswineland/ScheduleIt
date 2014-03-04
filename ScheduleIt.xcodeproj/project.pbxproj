@@ -11,6 +11,8 @@
 		0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E4618C5135700F7F005 /* SIScrollView.m */; };
 		0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */; };
 		0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5818C5533000F7F005 /* SILabelHeader.m */; };
+		0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */; };
+		0F2E6E6118C646EC00F7F005 /* messaging_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -51,6 +53,9 @@
 		0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SILabelTextBlock.m; sourceTree = "<group>"; };
 		0F2E6E5718C5533000F7F005 /* SILabelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SILabelHeader.h; sourceTree = "<group>"; };
 		0F2E6E5818C5533000F7F005 /* SILabelHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SILabelHeader.m; sourceTree = "<group>"; };
+		0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIPostAcknoledgement.h; sourceTree = "<group>"; };
+		0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIPostAcknoledgement.m; sourceTree = "<group>"; };
+		0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messaging_error@2x.png"; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +149,30 @@
 			name = TextField;
 			sourceTree = "<group>";
 		};
+		0F2E6E5D18C646C800F7F005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E5E18C646CF00F7F005 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0F2E6E5E18C646CF00F7F005 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E5F18C646D700F7F005 /* PostAcknoledgement */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0F2E6E5F18C646D700F7F005 /* PostAcknoledgement */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */,
+			);
+			name = PostAcknoledgement;
+			sourceTree = "<group>";
+		};
 		0FF88BD118C1038100F08CA9 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +216,7 @@
 		16DE4D8118BEC9FD00FF96A2 /* ScheduleIt */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E6E5D18C646C800F7F005 /* Resources */,
 				16DE4DB718BECDD300FF96A2 /* Shared */,
 				16DE4DB118BECA3E00FF96A2 /* Base */,
 				16DE4DB018BECA3700FF96A2 /* Controllers */,
@@ -240,6 +270,8 @@
 		16DE4DAF18BECA2F00FF96A2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				16DE4DC018C599EE00FF96A2 /* SIError.h */,
+				16DE4DC118C599EE00FF96A2 /* SIError.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -269,8 +301,8 @@
 				16DE4DB818BECEFE00FF96A2 /* BackgroundViewController.h */,
 				16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */,
 				16DE4DBB18BECFEB00FF96A2 /* Constants.h */,
-				16DE4DC018C599EE00FF96A2 /* SIError.h */,
-				16DE4DC118C599EE00FF96A2 /* SIError.m */,
+				0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */,
+				0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -352,6 +384,7 @@
 			files = (
 				16DE4D8618BEC9FD00FF96A2 /* InfoPlist.strings in Resources */,
 				16DE4D9118BEC9FD00FF96A2 /* Images.xcassets in Resources */,
+				0F2E6E6118C646EC00F7F005 /* messaging_error@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +407,7 @@
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
 				16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */,
 				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
+				0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
 				0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */,

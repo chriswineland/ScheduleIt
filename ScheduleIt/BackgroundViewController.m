@@ -36,8 +36,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - SIPosack delegate functions
+
+- (void)postAcknoledgmentFinnishedMoveDownAction:(SIPostAcknoledgement*)posack{
+    
+}
+
+- (void)postAcknoledgmentFinnishedMoveUpAction:(SIPostAcknoledgement*)posack{
+    
+}
+
+-(void)postAcknoledgmentWasTapped:(SIPostAcknoledgement*)posack{
+    [posack moveUpAction];
+}
+
+#pragma mark - helper functions
+
 - (CGFloat)verticalFrameOffsetOfUIElement:(UIView*)view{
     return view.frame.origin.y + view.frame.size.height;
+}
+
+- (void)handleError:(SIError*)error{
+    if (error == nil) return;
+    
+    SIPostAcknoledgement* posack = [[SIPostAcknoledgement alloc]initWithMessage:[error dereferanceCodeToErrorMessage]];
+    [[self view]addSubview:posack];
+    [posack setDelegate:self];
+    [posack moveDownAction];
+}
+
+- (void)showLoading{
+    
+}
+
+- (void)hideLoading{
+    
 }
 
 @end

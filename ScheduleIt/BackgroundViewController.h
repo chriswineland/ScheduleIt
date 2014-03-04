@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "SIError.h"
+#import "SIPostAcknoledgement.h"
 
-@interface BackgroundViewController : UIViewController{
+@interface BackgroundViewController : UIViewController<SIPostAcknoledgementDelegate>{
     CGFloat screenWidth;
     CGFloat screenHeight;
 }
 
 - (CGFloat)verticalFrameOffsetOfUIElement:(UIView*)view;
+- (void)handleError:(SIError*)error;
+- (void)showLoading;
+- (void)hideLoading;
 
 @end

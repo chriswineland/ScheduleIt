@@ -8,13 +8,23 @@
 
 #import "SILabelTextBlock.h"
 
+#define headerLabelFontType    [UIFont boldSystemFontOfSize:14]
+
 @implementation SILabelTextBlock
+
+- (id)init{
+    return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setFont:headerLabelFontType];
+        [self setTextColor:[UIColor blackColor]];
+        [self setNumberOfLines:0];
+        [self setTextAlignment:NSTextAlignmentLeft];
     }
     return self;
 }

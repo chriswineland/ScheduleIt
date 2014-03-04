@@ -14,6 +14,10 @@
 
 @implementation SILabelHeader
 
+- (id)init{
+    return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

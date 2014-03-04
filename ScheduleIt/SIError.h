@@ -13,5 +13,6 @@
 }
 
 - (void)setCode:(NSString*)code;
+- (NSString*)dereferanceCodeToErrorMessage;
 
 @end

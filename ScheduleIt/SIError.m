@@ -10,7 +10,7 @@
 
 @implementation SIError
 
--(NSString*)dereferanceCodeToErrorMessage{
+- (NSString*)dereferanceCodeToErrorMessage{
     return @"Error";
 }
 

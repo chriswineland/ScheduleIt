@@ -60,9 +60,11 @@
 
 - (void)siButtonWasPressed:(id)sender{
     if([sender tag] == SIGNINBUTTONTAG){
-        
+        SIError* error = [[SIError alloc]init];
+        [self handleError:error];
+        //[self signInAction];
     }else if ([sender tag] == SIGNUPBUTTONTAG){
-        
+        [self signUpAction];
     }
 }
 
@@ -71,6 +73,14 @@
 
 
 #pragma mark - helper functions
+
+- (void)signInAction{
+
+}
+
+- (void)signUpAction{
+    
+}
 
 - (SIError*)validateInputs{
     SIError* error = nil;
