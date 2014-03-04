@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "SIError.h"
 
 @interface BackgroundViewController : UIViewController{
     CGFloat screenWidth;

@@ -11,9 +11,11 @@
 #import "SIButton.h"
 #import "SIScrollView.h"
 #import "SILabelHeader.h"
+#import "SITextField.h"
 
-@interface SignInViewController : BackgroundViewController<SIButtonDelegate>{
-
+@interface SignInViewController : BackgroundViewController<SIButtonDelegate, UITextFieldDelegate>{
+    SITextField* uidTextField;
+    SITextField* passcodeField;
 }
 
 @end

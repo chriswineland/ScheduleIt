@@ -28,6 +28,8 @@
 		16DE4DA318BEC9FD00FF96A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DA118BEC9FD00FF96A2 /* InfoPlist.strings */; };
 		16DE4DA518BEC9FD00FF96A2 /* ScheduleItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DA418BEC9FD00FF96A2 /* ScheduleItTests.m */; };
 		16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */; };
+		16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DBE18C589DC00FF96A2 /* SITextField.m */; };
+		16DE4DC218C599EE00FF96A2 /* SIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DC118C599EE00FF96A2 /* SIError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		16DE4DB818BECEFE00FF96A2 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
 		16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
 		16DE4DBB18BECFEB00FF96A2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		16DE4DBD18C589DC00FF96A2 /* SITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SITextField.h; sourceTree = "<group>"; };
+		16DE4DBE18C589DC00FF96A2 /* SITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SITextField.m; sourceTree = "<group>"; };
+		16DE4DC018C599EE00FF96A2 /* SIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIError.h; sourceTree = "<group>"; };
+		16DE4DC118C599EE00FF96A2 /* SIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 		0F2E6E5018C551C100F7F005 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				16DE4DBD18C589DC00FF96A2 /* SITextField.h */,
+				16DE4DBE18C589DC00FF96A2 /* SITextField.m */,
 			);
 			name = TextField;
 			sourceTree = "<group>";
@@ -261,6 +269,8 @@
 				16DE4DB818BECEFE00FF96A2 /* BackgroundViewController.h */,
 				16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */,
 				16DE4DBB18BECFEB00FF96A2 /* Constants.h */,
+				16DE4DC018C599EE00FF96A2 /* SIError.h */,
+				16DE4DC118C599EE00FF96A2 /* SIError.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -360,7 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DE4DC218C599EE00FF96A2 /* SIError.m in Sources */,
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
+				16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */,
 				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,

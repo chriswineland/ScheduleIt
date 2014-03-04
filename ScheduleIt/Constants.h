@@ -15,7 +15,6 @@
 #define primaryColor2            RGB(74,96,215)
 #define primaryColor3            RGB(112,128,215)
 #define complementColor1         RGB(255,182,0)
-#define textFieldHeight          30
 #define borderWidth              30
 #define contentGap               2
 #define borderWidthx2            (borderWidth*2)

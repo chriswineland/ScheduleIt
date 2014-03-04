@@ -23,4 +23,12 @@
     return self;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    for(UIView* view in [self subviews]){
+        if([view isFirstResponder]){
+            [view resignFirstResponder];
+        }
+    }
+}
+
 @end

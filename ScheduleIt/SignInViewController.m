@@ -28,17 +28,20 @@
     [signInDirectiveText setText:@"User ID"];
     [contentView addSubview:signInDirectiveText];
     
-    UITextField* uidTextField = [[UITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInDirectiveText]+contentGap, screenWidth-borderWidthx2, textFieldHeight)];
-    [uidTextField setBorderStyle:UITextBorderStyleBezel];
-    [uidTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [uidTextField setSpellCheckingType:UITextSpellCheckingTypeNo];
+    uidTextField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    [uidTextField setDelegate:self];
     [contentView addSubview:uidTextField];
     
     SILabelHeader* passcodeDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:uidTextField]+contentGap, screenWidth-borderWidthx2,  siHeaderLableHeight)];
     [passcodeDirectiveText setText:@"Passcode"];
     [contentView addSubview:passcodeDirectiveText];
     
-    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, 155, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
+    passcodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    [passcodeField setSecureTextEntry:YES];
+    [passcodeField setDelegate:self];
+    [contentView addSubview:passcodeField];
+    
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+borderWidthx2, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
     [signInButton setTag:SIGNINBUTTONTAG];
     [signInButton setDelegate:self];
@@ -62,5 +65,33 @@
         
     }
 }
+
+#pragma mark - uitextfield Delegate
+
+
+
+#pragma mark - helper functions
+
+- (SIError*)validateInputs{
+    SIError* error = nil;
+    
+    if([[uidTextField text]length] == 0){
+        [self initError:error WithCode:@"MISSING_UID"];
+    } else if([[passcodeField text]length] == 0){
+        [self initError:error WithCode:@"MISSING_PASSCODE"];
+    } else if ([[passcodeField text]length] > 6){
+        [self initError:error WithCode:@"INVALID_PASSCODE_LENGTH"];
+    }
+    
+    return error;
+}
+
+- (void)initError:(SIError*)error WithCode:(NSString*)code{
+    if(error == nil){
+        error = [[SIError alloc]init];
+    }
+    [error setCode:code];
+}
+
 
 @end
