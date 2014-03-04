@@ -7,6 +7,10 @@
 //
 
 #import "SILabelHeader.h"
+#import "Constants.h"
+
+#define headerLabelFontType    [UIFont boldSystemFontOfSize:16]
+#define headerLabelFontColor   RGB(51,51,51)
 
 @implementation SILabelHeader
 
@@ -14,7 +18,11 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setFont:headerLabelFontType];
+        [self setTextColor:headerLabelFontColor];
+        [self setNumberOfLines:0];
+        [self setTextAlignment:NSTextAlignmentLeft];
     }
     return self;
 }

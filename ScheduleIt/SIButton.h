@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define buttonHeight    40
-#define buttonGap       3
+#define siButtonHeight    40
+#define siButtonGap       3
 
 typedef enum{
     kSIButtonTypePosative,

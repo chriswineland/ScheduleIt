@@ -21,22 +21,31 @@
 {
     [super viewDidLoad];
     [[self navigationItem]setTitle:@"Schedule It"];
+    
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
-    UITextField* uidTextField = [[UITextField alloc]initWithFrame:CGRectMake(horizantalBorderWidth, 45, screenWidth-(horizantalBorderWidth*2), textFieldHeight)];
+    SILabelHeader* signInDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, borderWidth, screenWidth-borderWidthx2, siHeaderLableHeight)];
+    [signInDirectiveText setText:@"User ID"];
+    [contentView addSubview:signInDirectiveText];
+    
+    UITextField* uidTextField = [[UITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInDirectiveText]+contentGap, screenWidth-borderWidthx2, textFieldHeight)];
     [uidTextField setBorderStyle:UITextBorderStyleBezel];
     [uidTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
     [uidTextField setSpellCheckingType:UITextSpellCheckingTypeNo];
     [contentView addSubview:uidTextField];
     
-    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(0, 155, screenWidth, buttonHeight) andButtonType:kSIButtonTypePosative];
+    SILabelHeader* passcodeDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:uidTextField]+contentGap, screenWidth-borderWidthx2,  siHeaderLableHeight)];
+    [passcodeDirectiveText setText:@"Passcode"];
+    [contentView addSubview:passcodeDirectiveText];
+    
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, 155, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
     [signInButton setTag:SIGNINBUTTONTAG];
     [signInButton setDelegate:self];
     [contentView addSubview:signInButton];
     
-    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(0, [self verticalFrameOffsetOfUIElement:signInButton] + buttonGap, screenWidth, buttonHeight) andButtonType:kSIButtonTypeNegative];
-    [signUpButton setTitle:@"Sigh Up"];
+    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInButton]+siButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
+    [signUpButton setTitle:@"Sign Up"];
     [signUpButton setTag:SIGNUPBUTTONTAG];
     [signUpButton setDelegate:self];
     [contentView addSubview:signUpButton];

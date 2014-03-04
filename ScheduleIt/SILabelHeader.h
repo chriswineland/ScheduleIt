@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SILabelHeader : UILabel
+#define siHeaderLableHeight 20
+
+@interface SILabelHeader : UILabel{
+    
+}
 
 @end

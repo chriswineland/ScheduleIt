@@ -9,7 +9,7 @@
 #import "SIButton.h"
 #import "Constants.h"
 
-#define button_font_type    [UIFont boldSystemFontOfSize:16]
+#define buttonFontType    [UIFont boldSystemFontOfSize:16]
 
 @implementation SIButton
 
@@ -31,7 +31,7 @@
         
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self setTitleColor:complementColor1 forState:UIControlStateHighlighted];
-        [[self titleLabel]setFont:button_font_type];
+        [[self titleLabel]setFont:buttonFontType];
         [self addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
         
         switch (self.butType) {

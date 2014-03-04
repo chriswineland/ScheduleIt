@@ -10,6 +10,7 @@
 #import "BackgroundViewController.h"
 #import "SIButton.h"
 #import "SIScrollView.h"
+#import "SILabelHeader.h"
 
 @interface SignInViewController : BackgroundViewController<SIButtonDelegate>{
 

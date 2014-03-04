@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define buttonHeight            40
-#define buttonGap               3
-
 @interface SILabelTextBlock : UILabel
 
 @end
