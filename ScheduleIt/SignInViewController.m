@@ -7,6 +7,7 @@
 //
 
 #import "SignInViewController.h"
+#import "RegisterViewController.h"
 
 #define signInButtonTag 1
 #define registerButtonTag 2
@@ -20,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self navigationItem]setTitle:@"Schedule It"];
+    [[self navigationItem]setTitle:@"Sign In"];
     
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
@@ -41,7 +42,7 @@
     [passcodeField setDelegate:self];
     [contentView addSubview:passcodeField];
     
-    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+borderWidthx2, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+EntryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
     [signInButton setTag:signInButtonTag];
     [signInButton setDelegate:self];
@@ -64,7 +65,7 @@
         [self handleError:error];
         //[self signInAction];
     }else if ([sender tag] == registerButtonTag){
-        [self signUpAction];
+        [self registurAction];
     }
 }
 
@@ -78,8 +79,9 @@
 
 }
 
-- (void)signUpAction{
-    
+- (void)registurAction{
+    RegisterViewController* vcl = [[RegisterViewController alloc]init];
+    [[self navigationController]pushViewController:vcl animated:YES];
 }
 
 - (SIError*)validateInputs{
@@ -95,13 +97,5 @@
     
     return error;
 }
-
-- (void)initError:(SIError*)error WithCode:(NSString*)code{
-    if(error == nil){
-        error = [[SIError alloc]init];
-    }
-    [error setCode:code];
-}
-
 
 @end

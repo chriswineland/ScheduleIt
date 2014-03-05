@@ -37,6 +37,7 @@
 		16DE4DC718C6DC4F00FF96A2 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DC618C6DC4F00FF96A2 /* home.png */; };
 		16DE4DC918C6DC6C00FF96A2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DC818C6DC6C00FF96A2 /* back.png */; };
 		16DE4DCB18C6DCDE00FF96A2 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DCA18C6DCDE00FF96A2 /* error.png */; };
+		16F3C4E618C6F81800F41C24 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F3C4E518C6F81800F41C24 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		16DE4DC618C6DC4F00FF96A2 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		16DE4DC818C6DC6C00FF96A2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		16DE4DCA18C6DCDE00FF96A2 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		16F3C4E418C6F81800F41C24 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		16F3C4E518C6F81800F41C24 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 			children = (
 				0FF88BD218C103EA00F08CA9 /* SignInViewController.h */,
 				0FF88BD318C103EA00F08CA9 /* SignInViewController.m */,
+				16F3C4E418C6F81800F41C24 /* RegisterViewController.h */,
+				16F3C4E518C6F81800F41C24 /* RegisterViewController.m */,
 			);
 			name = SignIn;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
 				0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */,
 				0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */,
+				16F3C4E618C6F81800F41C24 /* RegisterViewController.m in Sources */,
 				0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */,
 				16DE4D8818BEC9FD00FF96A2 /* main.m in Sources */,
 				0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */,

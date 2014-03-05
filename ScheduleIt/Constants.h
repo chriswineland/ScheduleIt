@@ -21,6 +21,7 @@
 
 #define borderWidth              18
 #define borderWidthx2            (borderWidth*2)
+#define EntryFieldToButtonGap    (borderWidth*3)
 #define contentGap               2
 
 #endif
