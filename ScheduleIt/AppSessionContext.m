@@ -10,6 +10,15 @@
 
 @implementation AppSessionContext
 
+- (id)init{
+    self = [super init];
+    if(self){
+        self.isDisplayingError = NO;
+        self.isAUserSignedIn = NO;
+    }
+    return self;
+}
+
 + (id)singleton{
     static AppSessionContext *singleton = nil;
     static dispatch_once_t onceToken;

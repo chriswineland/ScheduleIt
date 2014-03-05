@@ -13,6 +13,7 @@
 }
 
 @property BOOL isDisplayingError;
+@property BOOL isAUserSignedIn;
 
 +(id)singleton;
 

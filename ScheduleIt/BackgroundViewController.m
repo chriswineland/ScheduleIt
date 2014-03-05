@@ -8,6 +8,9 @@
 
 #import "BackgroundViewController.h"
 
+#define navButtonBorder 8
+#define navButtonWidth 23
+
 @interface BackgroundViewController ()
 
 @end
@@ -27,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	[self setUpNavBar];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,6 +70,95 @@
     [posack setDelegate:self];
     [posack moveDownAction];
 }
+
+#pragma mark - nav bar helpers
+
+- (void)setUpNavBar{
+    [self clearNavBar];
+    BOOL isOnBaseView = [[[self navigationController]viewControllers]count] == 0;
+    if([[AppSessionContext singleton]isAUserSignedIn]){
+        if(isOnBaseView){
+            [self addSignOutButtonToNavBar];
+        } else {
+            [self addBackButtonToNavBar];
+            [self addHomeButtonToNavBar];
+        }
+    } else {
+        if(!isOnBaseView){
+            [self addBackButtonToNavBar];
+        }
+    }
+}
+
+- (void)clearNavBar{
+    [[self navigationItem]setBackBarButtonItem:nil];
+    [[self navigationItem]setLeftBarButtonItem:nil];
+    [[self navigationItem]setRightBarButtonItem:nil];
+}
+
+- (void)addBackButtonToNavBar{
+    UIImage* image = [UIImage imageNamed:@"back.png"];
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setExclusiveTouch:YES];
+    [button addTarget:self action:@selector(backButtonHit) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(navButtonBorder, navButtonBorder, navButtonWidth, navButtonWidth)];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button setBackgroundImage:image forState:UIControlStateHighlighted];
+    [button setBackgroundImage:image forState:UIControlStateDisabled];
+    
+    UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    
+    [[self navigationItem]setLeftBarButtonItem:barButton];
+}
+
+- (void)addSignOutButtonToNavBar{
+    UIImage* image = [UIImage imageNamed:@"exit.png"];
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setExclusiveTouch:YES];
+    [button addTarget:self action:@selector(signOutButtonHit) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(navButtonBorder, navButtonBorder, navButtonWidth, navButtonWidth)];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button setBackgroundImage:image forState:UIControlStateHighlighted];
+    [button setBackgroundImage:image forState:UIControlStateDisabled];
+    
+    UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    
+    [[self navigationItem]setRightBarButtonItem:barButton];
+}
+
+- (void)addHomeButtonToNavBar{
+    UIImage* image = [UIImage imageNamed:@"home.png"];
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setExclusiveTouch:YES];
+    [button addTarget:self action:@selector(homeButtonHit) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(navButtonBorder, navButtonBorder, navButtonWidth, navButtonWidth)];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button setBackgroundImage:image forState:UIControlStateHighlighted];
+    [button setBackgroundImage:image forState:UIControlStateDisabled];
+    
+    UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    
+    [[self navigationItem]setRightBarButtonItem:barButton];
+}
+
+#pragma mark - nav bar selectors
+
+- (void)backButtonHit{
+    [[self navigationController]popViewControllerAnimated:YES];
+}
+
+- (void)signOutButtonHit{
+    //sign out operation
+}
+
+- (void)homeButtonHit{
+    [[self navigationController]popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark - loading helpers
 
 - (void)showLoading{
     
