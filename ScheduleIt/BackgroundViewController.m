@@ -114,10 +114,14 @@
     [button setBackgroundImage:image forState:UIControlStateNormal];
     [button setBackgroundImage:image forState:UIControlStateHighlighted];
     [button setBackgroundImage:image forState:UIControlStateDisabled];
+    [button setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    [barButton setTintColor:[UIColor whiteColor]];
     
     [[self navigationItem]setLeftBarButtonItem:barButton];
+    [[[self navigationItem]leftBarButtonItem]setTintColor:[UIColor whiteColor]];
+    [[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
 - (void)addSignOutButtonToNavBar{
@@ -130,8 +134,10 @@
     [button setBackgroundImage:image forState:UIControlStateNormal];
     [button setBackgroundImage:image forState:UIControlStateHighlighted];
     [button setBackgroundImage:image forState:UIControlStateDisabled];
+    [button setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    [barButton setTintColor:[UIColor whiteColor]];
     
     [[self navigationItem]setRightBarButtonItem:barButton];
 }
@@ -146,8 +152,10 @@
     [button setBackgroundImage:image forState:UIControlStateNormal];
     [button setBackgroundImage:image forState:UIControlStateHighlighted];
     [button setBackgroundImage:image forState:UIControlStateDisabled];
+    [button setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    [barButton setTintColor:[UIColor whiteColor]];
     
     [[self navigationItem]setRightBarButtonItem:barButton];
 }

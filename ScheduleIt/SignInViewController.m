@@ -25,21 +25,15 @@
     
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
-    SILabelHeader* signInDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, borderWidth, screenWidth-borderWidthx2, siHeaderLableHeight)];
-    [signInDirectiveText setText:@"User ID"];
-    [contentView addSubview:signInDirectiveText];
-    
-    uidTextField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    uidTextField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, borderWidth, screenWidth-borderWidthx2, siTextFieldHeight)];
     [uidTextField setDelegate:self];
+    [uidTextField setPlaceholder:@"User ID"];
     [contentView addSubview:uidTextField];
     
-    SILabelHeader* passcodeDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:uidTextField]+contentGap, screenWidth-borderWidthx2,  siHeaderLableHeight)];
-    [passcodeDirectiveText setText:@"Passcode"];
-    [contentView addSubview:passcodeDirectiveText];
-    
-    passcodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    passcodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:uidTextField]+borderWidth, screenWidth-borderWidthx2, siTextFieldHeight)];
     [passcodeField setSecureTextEntry:YES];
     [passcodeField setDelegate:self];
+    [passcodeField setPlaceholder:@"Passcode"];
     [contentView addSubview:passcodeField];
     
     SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+EntryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
@@ -76,7 +70,13 @@
 #pragma mark - helper functions
 
 - (void)signInAction{
-
+    SIError* validInputs = [self validateInputs];
+    if(validInputs == nil){
+        
+    } else {
+        [self handleError:validInputs];
+    }
+    
 }
 
 - (void)registurAction{

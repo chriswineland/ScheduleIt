@@ -7,6 +7,9 @@
 //
 
 #import "SITextField.h"
+#import "Constants.h"
+
+#define placeHolderTextColor
 
 @implementation SITextField
 
@@ -23,6 +26,11 @@
         [self setSpellCheckingType:UITextSpellCheckingTypeNo];
     }
     return self;
+}
+
+- (void)drawPlaceholderInRect:(CGRect)rect{
+    [[self placeholder]drawInRect:rect withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],
+                                                        NSForegroundColorAttributeName: RGB(102, 102, 102)}];
 }
 
 @end

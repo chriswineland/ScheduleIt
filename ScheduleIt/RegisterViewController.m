@@ -24,30 +24,21 @@
     
     SIScrollView* contentView = [[SIScrollView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
-    SILabelHeader* createUIDDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, borderWidth, screenWidth-borderWidthx2, siHeaderLableHeight)];
-    [createUIDDirectiveText setText:@"Enter New User ID"];
-    [contentView addSubview:createUIDDirectiveText];
-    
-    createUITTextField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createUIDDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    createUITTextField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, borderWidth, screenWidth-borderWidthx2, siTextFieldHeight)];
     [createUITTextField setDelegate:self];
+    [createUITTextField setPlaceholder:@"Enter New User ID"];
     [contentView addSubview:createUITTextField];
     
-    SILabelHeader* createPasscodeDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createUITTextField]+contentGap, screenWidth-borderWidthx2,  siHeaderLableHeight)];
-    [createPasscodeDirectiveText setText:@"Create Passcode"];
-    [contentView addSubview:createPasscodeDirectiveText];
-    
-    createPasscodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createPasscodeDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+    createPasscodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createUITTextField]+borderWidth, screenWidth-borderWidthx2, siTextFieldHeight)];
     [createPasscodeField setSecureTextEntry:YES];
     [createPasscodeField setDelegate:self];
+    [createPasscodeField setPlaceholder:@"Create Passcode"];
     [contentView addSubview:createPasscodeField];
-    
-    SILabelHeader* confermPasscodeDirectiveText = [[SILabelHeader alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createPasscodeField]+contentGap, screenWidth-borderWidthx2,  siHeaderLableHeight)];
-    [confermPasscodeDirectiveText setText:@"Re Enter Passcode"];
-    [contentView addSubview:confermPasscodeDirectiveText];
-    
-    confermPasscodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:confermPasscodeDirectiveText]+contentGap, screenWidth-borderWidthx2, siTextFieldHeight)];
+        
+    confermPasscodeField = [[SITextField alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:createPasscodeField]+borderWidth, screenWidth-borderWidthx2, siTextFieldHeight)];
     [confermPasscodeField setSecureTextEntry:YES];
     [confermPasscodeField setDelegate:self];
+    [confermPasscodeField setPlaceholder:@"Re Enter Passcode"];
     [contentView addSubview:confermPasscodeField];
     
     SIButton* registerButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:confermPasscodeField]+EntryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
