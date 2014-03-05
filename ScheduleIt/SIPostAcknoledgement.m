@@ -37,7 +37,7 @@
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         [self setFrame:CGRectMake(0, -postAcknoledgementHeight, screenRect.size.width, postAcknoledgementHeight)];
         [self setBackgroundColor:complementColor1];
-        [self setAlpha:.8];
+        [self setAlpha:.9];
         
         UIImageView* image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"messaging_error@2x.png"]];
         [image setFrame:CGRectMake(imagePadding, imagePadding, imageLength, imageLength)];

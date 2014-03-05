@@ -19,7 +19,7 @@
 #define primaryColor3            RGB(88,148,195)
 #define complementColor1         RGB(255,116,0)
 
-#define borderWidth              30
+#define borderWidth              18
 #define borderWidthx2            (borderWidth*2)
 #define contentGap               2
 
