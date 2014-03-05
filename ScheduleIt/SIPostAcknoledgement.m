@@ -39,8 +39,8 @@
         [self setBackgroundColor:complementColor1];
         [self setAlpha:.9];
         
-        UIImageView* image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"messaging_error@2x.png"]];
-        [image setFrame:CGRectMake(imagePadding, imagePadding, imageLength, imageLength)];
+        UIImageView* image = [[UIImageView alloc]initWithFrame:CGRectMake(imagePadding, imagePadding, imageLength, imageLength)];
+        [image setImage:[UIImage imageNamed:@"messaging_error@2x.png"]];
         [self addSubview:image];
         
         SILabelTextBlock* messageText = [[SILabelTextBlock alloc]initWithFrame:CGRectMake(postAcknoledgementHeight, imagePadding, screenRect.size.width - postAcknoledgementHeight+imagePadding, imageLength)];

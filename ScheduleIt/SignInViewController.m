@@ -8,8 +8,8 @@
 
 #import "SignInViewController.h"
 
-#define SIGNINBUTTONTAG 1
-#define SIGNUPBUTTONTAG 2
+#define signInButtonTag 1
+#define registureButtonTag 2
 
 @interface SignInViewController ()
 
@@ -43,15 +43,15 @@
     
     SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+borderWidthx2, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
-    [signInButton setTag:SIGNINBUTTONTAG];
+    [signInButton setTag:signInButtonTag];
     [signInButton setDelegate:self];
     [contentView addSubview:signInButton];
     
-    SIButton* signUpButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInButton]+siButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
-    [signUpButton setTitle:@"Sign Up"];
-    [signUpButton setTag:SIGNUPBUTTONTAG];
-    [signUpButton setDelegate:self];
-    [contentView addSubview:signUpButton];
+    SIButton* registureButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInButton]+siButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
+    [registureButton setTitle:@"Registure"];
+    [registureButton setTag:registureButtonTag];
+    [registureButton setDelegate:self];
+    [contentView addSubview:registureButton];
     
     [[self view]addSubview:contentView];
 }
@@ -59,11 +59,11 @@
 #pragma mark - SIButton Delegate
 
 - (void)siButtonWasPressed:(id)sender{
-    if([sender tag] == SIGNINBUTTONTAG){
+    if([sender tag] == signInButtonTag){
         SIError* error = [[SIError alloc]init];
         [self handleError:error];
         //[self signInAction];
-    }else if ([sender tag] == SIGNUPBUTTONTAG){
+    }else if ([sender tag] == registureButtonTag){
         [self signUpAction];
     }
 }
