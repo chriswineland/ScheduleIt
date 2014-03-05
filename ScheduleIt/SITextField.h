@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#define siTextFieldHeight   30
+#define siTextFieldHeight   28
 
 @interface SITextField : UITextField{
     

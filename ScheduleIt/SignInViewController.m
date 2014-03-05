@@ -9,7 +9,7 @@
 #import "SignInViewController.h"
 
 #define signInButtonTag 1
-#define registureButtonTag 2
+#define registerButtonTag 2
 
 @interface SignInViewController ()
 
@@ -47,11 +47,11 @@
     [signInButton setDelegate:self];
     [contentView addSubview:signInButton];
     
-    SIButton* registureButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInButton]+siButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
-    [registureButton setTitle:@"Registure"];
-    [registureButton setTag:registureButtonTag];
-    [registureButton setDelegate:self];
-    [contentView addSubview:registureButton];
+    SIButton* registerButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:signInButton]+siButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
+    [registerButton setTitle:@"Register"];
+    [registerButton setTag:registerButtonTag];
+    [registerButton setDelegate:self];
+    [contentView addSubview:registerButton];
     
     [[self view]addSubview:contentView];
 }
@@ -63,7 +63,7 @@
         SIError* error = [[SIError alloc]init];
         [self handleError:error];
         //[self signInAction];
-    }else if ([sender tag] == registureButtonTag){
+    }else if ([sender tag] == registerButtonTag){
         [self signUpAction];
     }
 }

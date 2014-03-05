@@ -12,7 +12,6 @@
 		0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5518C5530800F7F005 /* SILabelTextBlock.m */; };
 		0F2E6E5918C5533000F7F005 /* SILabelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5818C5533000F7F005 /* SILabelHeader.m */; };
 		0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */; };
-		0F2E6E6118C646EC00F7F005 /* messaging_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */; };
 		0F2E6E6718C68C4800F7F005 /* UserSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */; };
 		0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
@@ -34,6 +33,10 @@
 		16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DB918BECEFE00FF96A2 /* BackgroundViewController.m */; };
 		16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DBE18C589DC00FF96A2 /* SITextField.m */; };
 		16DE4DC218C599EE00FF96A2 /* SIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE4DC118C599EE00FF96A2 /* SIError.m */; };
+		16DE4DC518C6DC3400FF96A2 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DC418C6DC3400FF96A2 /* exit.png */; };
+		16DE4DC718C6DC4F00FF96A2 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DC618C6DC4F00FF96A2 /* home.png */; };
+		16DE4DC918C6DC6C00FF96A2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DC818C6DC6C00FF96A2 /* back.png */; };
+		16DE4DCB18C6DCDE00FF96A2 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DE4DCA18C6DCDE00FF96A2 /* error.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,6 @@
 		0F2E6E5818C5533000F7F005 /* SILabelHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SILabelHeader.m; sourceTree = "<group>"; };
 		0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIPostAcknoledgement.h; sourceTree = "<group>"; };
 		0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIPostAcknoledgement.m; sourceTree = "<group>"; };
-		0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messaging_error@2x.png"; sourceTree = "<group>"; };
 		0F2E6E6518C68C4800F7F005 /* UserSessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSessionContext.h; sourceTree = "<group>"; };
 		0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSessionContext.m; sourceTree = "<group>"; };
 		0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSessionContext.h; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		16DE4DBE18C589DC00FF96A2 /* SITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SITextField.m; sourceTree = "<group>"; };
 		16DE4DC018C599EE00FF96A2 /* SIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIError.h; sourceTree = "<group>"; };
 		16DE4DC118C599EE00FF96A2 /* SIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIError.m; sourceTree = "<group>"; };
+		16DE4DC418C6DC3400FF96A2 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		16DE4DC618C6DC4F00FF96A2 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		16DE4DC818C6DC6C00FF96A2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		16DE4DCA18C6DCDE00FF96A2 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		0F2E6E5E18C646CF00F7F005 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				16DE4DC318C6DC0200FF96A2 /* NavigationBar */,
 				0F2E6E5F18C646D700F7F005 /* PostAcknoledgement */,
 			);
 			name = Images;
@@ -175,7 +182,7 @@
 		0F2E6E5F18C646D700F7F005 /* PostAcknoledgement */ = {
 			isa = PBXGroup;
 			children = (
-				0F2E6E6018C646EC00F7F005 /* messaging_error@2x.png */,
+				16DE4DCA18C6DCDE00FF96A2 /* error.png */,
 			);
 			name = PostAcknoledgement;
 			sourceTree = "<group>";
@@ -319,6 +326,16 @@
 			name = Shared;
 			sourceTree = "<group>";
 		};
+		16DE4DC318C6DC0200FF96A2 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				16DE4DC818C6DC6C00FF96A2 /* back.png */,
+				16DE4DC618C6DC4F00FF96A2 /* home.png */,
+				16DE4DC418C6DC3400FF96A2 /* exit.png */,
+			);
+			name = NavigationBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,7 +413,10 @@
 			files = (
 				16DE4D8618BEC9FD00FF96A2 /* InfoPlist.strings in Resources */,
 				16DE4D9118BEC9FD00FF96A2 /* Images.xcassets in Resources */,
-				0F2E6E6118C646EC00F7F005 /* messaging_error@2x.png in Resources */,
+				16DE4DC518C6DC3400FF96A2 /* exit.png in Resources */,
+				16DE4DCB18C6DCDE00FF96A2 /* error.png in Resources */,
+				16DE4DC918C6DC6C00FF96A2 /* back.png in Resources */,
+				16DE4DC718C6DC4F00FF96A2 /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

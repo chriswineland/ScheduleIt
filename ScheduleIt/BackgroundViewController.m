@@ -58,6 +58,7 @@
 
 - (void)handleError:(SIError*)error{
     if (error == nil) return;
+    //this should maybe show a new error if it is differant then the displaying error
     if([[AppSessionContext singleton]isDisplayingError]) return;
     
     [[AppSessionContext singleton]setIsDisplayingError:YES];

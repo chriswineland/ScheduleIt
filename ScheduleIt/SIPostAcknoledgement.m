@@ -11,11 +11,11 @@
 #import "SILabelTextBlock.h"
 
 #define postAcknoledgementHeight    54
-#define imagePadding                5
-#define imageLength                 44
+#define imagePadding                13
+#define imageLength                 28
 #define statueBarHeight             20
 #define navBarHeight                44
-#define posackTimeOut               3.0
+#define posackTimeOut               3.5
 
 @implementation SIPostAcknoledgement
 
@@ -40,7 +40,7 @@
         [self setAlpha:.9];
         
         UIImageView* image = [[UIImageView alloc]initWithFrame:CGRectMake(imagePadding, imagePadding, imageLength, imageLength)];
-        [image setImage:[UIImage imageNamed:@"messaging_error@2x.png"]];
+        [image setImage:[UIImage imageNamed:@"error.png"]];
         [self addSubview:image];
         
         SILabelTextBlock* messageText = [[SILabelTextBlock alloc]initWithFrame:CGRectMake(postAcknoledgementHeight, imagePadding, screenRect.size.width - postAcknoledgementHeight+imagePadding, imageLength)];
