@@ -12,6 +12,7 @@
 
 @interface SIPostAcknoledgement : UIView{
     id<SIPostAcknoledgementDelegate>delegate;
+    BOOL wasTaped;
 }
 
 @property id<SIPostAcknoledgementDelegate>delegate;

@@ -10,11 +10,12 @@
 #import "Constants.h"
 #import "SILabelTextBlock.h"
 
-#define postAcknoledgementHeight 54
-#define imagePadding 5
-#define imageLength 44
-#define statueBarHeight 20
-#define navBarHeight 44
+#define postAcknoledgementHeight    54
+#define imagePadding                5
+#define imageLength                 44
+#define statueBarHeight             20
+#define navBarHeight                44
+#define posackTimeOut               3.0
 
 @implementation SIPostAcknoledgement
 
@@ -32,6 +33,7 @@
 - (id)initWithMessage:(NSString*)message{
     self = [super initWithFrame:CGRectMake(0, 0, 0, 0)];
     if(self){
+        wasTaped = NO;
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         [self setFrame:CGRectMake(0, -postAcknoledgementHeight, screenRect.size.width, postAcknoledgementHeight)];
         [self setBackgroundColor:complementColor1];
@@ -49,6 +51,7 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    wasTaped = YES;
     [delegate postAcknoledgmentWasTapped:self];
 }
 
@@ -62,6 +65,18 @@
     [UIView setAnimationDelegate:self];
     [UIView setAnimationCurve: UIViewAnimationCurveEaseIn];
     [UIView commitAnimations];
+    
+    [NSTimer scheduledTimerWithTimeInterval:posackTimeOut
+                                     target:self
+                                   selector:@selector(timeOutOccured)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+- (void)timeOutOccured{
+    if(!wasTaped){
+        [self moveUpAction];
+    }
 }
 
 - (void)moveUpAction{
