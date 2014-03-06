@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface UserSessionContext : NSObject{
-
+    //userProfile
+    //listOfApointments
+    //listOfServices
 }
 
 +(id)singleton;
