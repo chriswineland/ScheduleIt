@@ -69,6 +69,7 @@
 		0F2E6E6E18C6911C00F7F005 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		0F2E6E7418C8FF3100F7F005 /* SIGroupedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGroupedTableViewController.h; sourceTree = "<group>"; };
 		0F2E6E7518C8FF3100F7F005 /* SIGroupedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGroupedTableViewController.m; sourceTree = "<group>"; };
+		0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SIErrorCodes.h; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +323,7 @@
 				0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */,
 				0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */,
 				0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */,
+				0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */,
 			);
 			name = Domain;
 			sourceTree = "<group>";

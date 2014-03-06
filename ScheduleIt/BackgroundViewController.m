@@ -71,13 +71,6 @@
     [posack moveDownAction];
 }
 
-- (void)initError:(SIError*)error WithCode:(NSString*)code{
-    if(error == nil){
-        error = [[SIError alloc]init];
-    }
-    [error setCode:code];
-}
-
 
 #pragma mark - nav bar helpers
 

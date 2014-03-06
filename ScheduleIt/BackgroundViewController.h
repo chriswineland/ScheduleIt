@@ -19,7 +19,6 @@
 
 - (CGFloat)verticalFrameOffsetOfUIElement:(UIView*)view;
 - (void)handleError:(SIError*)error;
-- (void)initError:(SIError*)error WithCode:(NSString*)code;
 - (void)showLoading;
 - (void)hideLoading;
 

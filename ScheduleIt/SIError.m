@@ -10,12 +10,24 @@
 
 @implementation SIError
 
+- (id)init{
+    return [self initWithCode:@""];
+}
+
+- (id)initWithCode:(NSString* const)code{
+    self = [super init];
+    if(self){
+        errorCode = code;
+    }
+    return self;
+}
+
 - (NSString*)dereferanceCodeToErrorMessage{
     return @"Error";
 }
 
 - (void)setCode:(NSString*)newCode{
-    code = newCode;
+    errorCode = newCode;
 }
 
 @end

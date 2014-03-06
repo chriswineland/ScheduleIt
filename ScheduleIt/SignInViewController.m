@@ -55,9 +55,12 @@
 
 - (void)siButtonWasPressed:(id)sender{
     if([sender tag] == signInButtonTag){
-        SIError* error = [[SIError alloc]init];
-        [self handleError:error];
-        //[self signInAction];
+        SIError* error = [self validateInputs];
+        if(error){
+            [self handleError:error];
+        } else {
+            [self signInAction];
+        }
     }else if ([sender tag] == registerButtonTag){
         [self registurAction];
     }
@@ -88,11 +91,11 @@
     SIError* error = nil;
     
     if([[uidTextField text]length] == 0){
-        [self initError:error WithCode:@"MISSING_UID"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeMissingUID];
     } else if([[passcodeField text]length] == 0){
-        [self initError:error WithCode:@"MISSING_PASSCODE"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeMissingPasscode];
     } else if ([[passcodeField text]length] > 6){
-        [self initError:error WithCode:@"INVALID_PASSCODE_LENGTH"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeInvalidPasscodeLength];
     }
     
     return error;

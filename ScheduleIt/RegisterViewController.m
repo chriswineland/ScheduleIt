@@ -62,15 +62,15 @@
     SIError* error = nil;
     
     if([[createUITTextField text]length] == 0){
-        [self initError:error WithCode:@"MISSING_UID"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeMissingUID];
     } else if([[createPasscodeField text]length] == 0 ||
               [[confermPasscodeField text]length] == 0){
-        [self initError:error WithCode:@"MISSING_PASSCODE"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeMissingPasscode];
     } else if ([[createPasscodeField text]length] > 6 ||
                [[confermPasscodeField text]length] > 6){
-        [self initError:error WithCode:@"INVALID_PASSCODE_LENGTH"];
+        error = [[SIError alloc]initWithCode:SIErrorCodeInvalidPasscodeLength];
     } else if (![[createPasscodeField text] compare:[confermPasscodeField text]] == NSOrderedSame){
-        [self initError:error WithCode:@"PASSCODES_DONT_MATCH"];
+        error = [[SIError alloc]initWithCode:SIErrorCodePasscodesDoNotMatch];
     }
     
     return error;

@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SIErrorCodes.h"
+
 
 @interface SIError : NSObject{
-    NSString* code;
+    NSString* errorCode;
 }
 
-- (void)setCode:(NSString*)code;
+- (void)setCode:(NSString*)newCode;
 - (NSString*)dereferanceCodeToErrorMessage;
+- (id)initWithCode:(NSString*)code;
 
 @end
