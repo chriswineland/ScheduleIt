@@ -21,7 +21,12 @@
 
 #define borderWidth              18
 #define borderWidthx2            (borderWidth*2)
-#define EntryFieldToButtonGap    (borderWidth*3)
+#define entryFieldToButtonGap    (borderWidth*3)
 #define contentGap               2
+
+#define elementShadowColor       [UIColor blackColor].CGColor
+#define elementShadowOpacity     0.3
+#define elementShadowRadius      3
+#define elementShadowOffset      CGSizeMake(3.0f, 3.0f)
 
 #endif

@@ -41,7 +41,7 @@
     [confermPasscodeField setPlaceholder:@"Re Enter Passcode"];
     [contentView addSubview:confermPasscodeField];
     
-    SIButton* registerButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:confermPasscodeField]+EntryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
+    SIButton* registerButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:confermPasscodeField]+entryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypeNegative];
     [registerButton setTitle:@"Register"];
     [registerButton setTag:registerButtonTag];
     [registerButton setDelegate:self];

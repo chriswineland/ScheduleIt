@@ -36,7 +36,7 @@
     [passcodeField setPlaceholder:@"Passcode"];
     [contentView addSubview:passcodeField];
     
-    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+EntryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
+    SIButton* signInButton = [[SIButton alloc]initWithFrame:CGRectMake(borderWidth, [self verticalFrameOffsetOfUIElement:passcodeField]+entryFieldToButtonGap, screenWidth-borderWidthx2, siButtonHeight) andButtonType:kSIButtonTypePosative];
     [signInButton setTitle:@"Sign In"];
     [signInButton setTag:signInButtonTag];
     [signInButton setDelegate:self];

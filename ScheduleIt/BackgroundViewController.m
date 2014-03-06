@@ -99,9 +99,9 @@
 }
 
 - (void)clearNavBar{
-    [[self navigationItem]setBackBarButtonItem:nil];
-    [[self navigationItem]setLeftBarButtonItem:nil];
-    [[self navigationItem]setRightBarButtonItem:nil];
+    [self navigationItem].backBarButtonItem = nil;
+    [self navigationItem].leftBarButtonItem = nil;
+    [self navigationItem].rightBarButtonItem = nil;
 }
 
 - (void)addBackButtonToNavBar{
@@ -119,8 +119,7 @@
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
     [barButton setTintColor:[UIColor whiteColor]];
     
-    [[self navigationItem]setLeftBarButtonItem:barButton];
-    [[[self navigationItem]leftBarButtonItem]setTintColor:[UIColor whiteColor]];
+    [self navigationItem].leftBarButtonItem = barButton;
     [[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
@@ -139,7 +138,7 @@
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
     [barButton setTintColor:[UIColor whiteColor]];
     
-    [[self navigationItem]setRightBarButtonItem:barButton];
+    [self navigationItem].leftBarButtonItem = barButton;
 }
 
 - (void)addHomeButtonToNavBar{
@@ -157,7 +156,7 @@
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
     [barButton setTintColor:[UIColor whiteColor]];
     
-    [[self navigationItem]setRightBarButtonItem:barButton];
+    [self navigationItem].rightBarButtonItem = barButton;
 }
 
 #pragma mark - nav bar selectors

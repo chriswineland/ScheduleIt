@@ -9,7 +9,7 @@
 #import "SILabelHeader.h"
 #import "Constants.h"
 
-#define headerLabelFontType    [UIFont boldSystemFontOfSize:16]
+#define headerLabelFontType    [UIFont fontWithName:@"HelveticaNeue-Bold" size:16]
 #define headerLabelFontColor   RGB(51,51,51)
 
 @implementation SILabelHeader

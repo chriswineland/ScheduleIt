@@ -8,7 +8,7 @@
 
 #import "SILabelTextBlock.h"
 
-#define headerLabelFontType    [UIFont boldSystemFontOfSize:14]
+#define headerLabelFontType    [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]
 
 @implementation SILabelTextBlock
 

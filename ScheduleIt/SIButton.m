@@ -8,8 +8,9 @@
 
 #import "SIButton.h"
 #import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
 
-#define buttonFontType    [UIFont boldSystemFontOfSize:16]
+#define buttonFontType    [UIFont fontWithName:@"HelveticaNeue-Bold" size:16]
 
 @implementation SIButton
 
@@ -34,6 +35,9 @@
         [[self titleLabel]setFont:buttonFontType];
         [self addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
         
+        [self createBorder];
+        [self createShadow];
+        
         switch (self.butType) {
             case kSIButtonTypePosative:
             {
@@ -57,6 +61,20 @@
 }
 
 #pragma mark - helper functions
+
+- (void)createBorder{
+    [[self layer] setBorderWidth:1.0f];
+    [[self layer] setBorderColor:[UIColor blackColor].CGColor];
+}
+
+- (void)createShadow{
+    [self layer].masksToBounds = NO;
+    
+    [self layer].shadowColor = elementShadowColor;
+    [self layer].shadowOpacity = elementShadowOpacity;
+    [self layer].shadowRadius = elementShadowRadius;
+    [self layer].shadowOffset = elementShadowOffset;
+}
 
 - (void)setTitle:(NSString*)title{
     [self setTitle:title forState:UIControlStateNormal];

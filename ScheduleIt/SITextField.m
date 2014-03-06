@@ -29,7 +29,7 @@
 }
 
 - (void)drawPlaceholderInRect:(CGRect)rect{
-    [[self placeholder]drawInRect:rect withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],
+    [[self placeholder]drawInRect:rect withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:14],
                                                         NSForegroundColorAttributeName: RGB(102, 102, 102)}];
 }
 

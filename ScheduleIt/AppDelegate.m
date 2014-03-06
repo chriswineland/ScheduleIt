@@ -28,8 +28,10 @@
     
     UINavigationController* navController = [[UINavigationController alloc]initWithRootViewController:signIn];
     [[navController navigationBar] setBarTintColor:primaryColor1];
+    navController.navigationBar.tintColor = [UIColor whiteColor];
     [navController.navigationBar setTitleTextAttributes:@{
-                                                          NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                          NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                          NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:20]
                                                           }];
     
     [[self window]setRootViewController:navController];
