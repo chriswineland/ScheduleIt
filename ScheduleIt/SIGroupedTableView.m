@@ -1,43 +1,46 @@
 //
-//  SIGroupedTableViewController.m
+//  SIGroupedTableView.m
 //  ScheduleIt
 //
-//  Created by Chris Wineland on 3/6/14.
+//  Created by Chris Wineland on 3/7/14.
 //  Copyright (c) 2014 Chris Wineland. All rights reserved.
 //
 
-#import "SIGroupedTableViewController.h"
+#import "SIGroupedTableView.h"
+#import "Constants.h"
 
-@interface SIGroupedTableViewController ()
+@implementation SIGroupedTableView
 
-@end
+- (id)init{
+    return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
 
-@implementation SIGroupedTableViewController
+- (id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
+    return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithStyle:style];
+    self = [super initWithFrame:frame];
     if (self) {
-        // Custom initialization
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setBackgroundView:nil];
+        [self setBounces:YES];
+        [self setRowHeight:55.0f];
+        [self setSeparatorColor:RGB(102, 102, 102)];
+        [self setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     }
     return self;
 }
 
-- (void)viewDidLoad
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
 {
-    
+    // Drawing code
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
+*/
 
 /*
  this is logic to expand and shink a table view based on tap
@@ -96,5 +99,6 @@
  
  }
  */
+
 
 @end
