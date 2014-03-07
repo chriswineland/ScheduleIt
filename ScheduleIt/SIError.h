@@ -11,11 +11,11 @@
 
 
 @interface SIError : NSObject{
-    NSString* errorCode;
+    SIErrorCode errorCode;
 }
 
-- (void)setCode:(NSString*)newCode;
+- (void)setCode:(SIErrorCode)newCode;
 - (NSString*)dereferanceCodeToErrorMessage;
-- (id)initWithCode:(NSString*)code;
+- (id)initWithCode:(SIErrorCode)code;
 
 @end

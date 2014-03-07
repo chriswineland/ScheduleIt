@@ -53,7 +53,12 @@
 #pragma mark - sibutton delegate
 
 - (void)siButtonWasPressed:(id)sender{
-    
+    SIError* validInputs = [self validateInputs];
+    if(validInputs == nil){
+        //registure action
+    } else {
+        [self handleError:validInputs];
+    }
 }
 
 #pragma mark - helper functions
@@ -62,15 +67,15 @@
     SIError* error = nil;
     
     if([[createUITTextField text]length] == 0){
-        error = [[SIError alloc]initWithCode:SIErrorCodeMissingUID];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeMissingUID];
     } else if([[createPasscodeField text]length] == 0 ||
               [[confermPasscodeField text]length] == 0){
-        error = [[SIError alloc]initWithCode:SIErrorCodeMissingPasscode];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeMissingPasscode];
     } else if ([[createPasscodeField text]length] > 6 ||
                [[confermPasscodeField text]length] > 6){
-        error = [[SIError alloc]initWithCode:SIErrorCodeInvalidPasscodeLength];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeInvalidPasscodeLength];
     } else if (![[createPasscodeField text] compare:[confermPasscodeField text]] == NSOrderedSame){
-        error = [[SIError alloc]initWithCode:SIErrorCodePasscodesDoNotMatch];
+        error = [[SIError alloc]initWithCode:kSIErrorCodePasscodesDoNotMatch];
     }
     
     return error;

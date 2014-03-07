@@ -33,12 +33,6 @@
 	[self setUpNavBar];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - SIPosack delegate functions
 
 - (void)postAcknoledgmentFinnishedMoveDownAction:(SIPostAcknoledgement*)posack{

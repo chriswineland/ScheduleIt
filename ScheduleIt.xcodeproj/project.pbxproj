@@ -319,11 +319,11 @@
 			children = (
 				16DE4DC018C599EE00FF96A2 /* SIError.h */,
 				16DE4DC118C599EE00FF96A2 /* SIError.m */,
+				0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */,
 				0F2E6E6518C68C4800F7F005 /* UserSessionContext.h */,
 				0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */,
 				0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */,
 				0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */,
-				0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */,
 			);
 			name = Domain;
 			sourceTree = "<group>";

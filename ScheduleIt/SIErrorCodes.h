@@ -6,7 +6,10 @@
 //  Copyright (c) 2014 Chris Wineland. All rights reserved.
 //
 
-NSString* const SIErrorCodeMissingUID = @"MISSING_UID";
-NSString* const SIErrorCodeMissingPasscode = @"MISSING_PASSCODE";
-NSString* const SIErrorCodeInvalidPasscodeLength = @"INVALID_PASSCODE_LENGTH";
-NSString* const SIErrorCodePasscodesDoNotMatch = @"PASSCODES_DONT_MATCH";
+typedef enum{
+    kSIErrorCodeMissingUID,
+    kSIErrorCodeMissingPasscode,
+    kSIErrorCodeInvalidPasscodeLength,
+    kSIErrorCodePasscodesDoNotMatch,
+    kSIErrorCodeUnknown
+}SIErrorCode;

@@ -75,11 +75,10 @@
 - (void)signInAction{
     SIError* validInputs = [self validateInputs];
     if(validInputs == nil){
-        
+        //sign in action
     } else {
         [self handleError:validInputs];
     }
-    
 }
 
 - (void)registurAction{
@@ -91,11 +90,11 @@
     SIError* error = nil;
     
     if([[uidTextField text]length] == 0){
-        error = [[SIError alloc]initWithCode:SIErrorCodeMissingUID];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeMissingUID];
     } else if([[passcodeField text]length] == 0){
-        error = [[SIError alloc]initWithCode:SIErrorCodeMissingPasscode];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeMissingPasscode];
     } else if ([[passcodeField text]length] > 6){
-        error = [[SIError alloc]initWithCode:SIErrorCodeInvalidPasscodeLength];
+        error = [[SIError alloc]initWithCode:kSIErrorCodeInvalidPasscodeLength];
     }
     
     return error;
