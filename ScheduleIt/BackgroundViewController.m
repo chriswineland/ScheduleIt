@@ -107,7 +107,7 @@
     [barButton setTintColor:[UIColor whiteColor]];
     
     [self navigationItem].leftBarButtonItem = barButton;
-    [[self navigationItem]setLeftItemsSupplementBackButton:YES];
+    //[[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
 - (void)addSignOutButtonToNavBar{
@@ -126,6 +126,7 @@
     [barButton setTintColor:[UIColor whiteColor]];
     
     [self navigationItem].leftBarButtonItem = barButton;
+    //[[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
 - (void)addHomeButtonToNavBar{

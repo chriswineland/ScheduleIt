@@ -15,6 +15,7 @@
 		0F2E6E6718C68C4800F7F005 /* UserSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */; };
 		0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */; };
 		0F2E6E7C18CA464200F7F005 /* SIGroupedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7B18CA464200F7F005 /* SIGroupedTableView.m */; };
+		0F2E6E7F18CA4C5000F7F005 /* AccountMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -70,6 +71,8 @@
 		0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SIErrorCodes.h; sourceTree = "<group>"; };
 		0F2E6E7A18CA464200F7F005 /* SIGroupedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGroupedTableView.h; sourceTree = "<group>"; };
 		0F2E6E7B18CA464200F7F005 /* SIGroupedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGroupedTableView.m; sourceTree = "<group>"; };
+		0F2E6E7D18CA4C5000F7F005 /* AccountMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainViewController.h; sourceTree = "<group>"; };
+		0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainViewController.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +200,8 @@
 		0F2E6E7118C8E83700F7F005 /* AccountMain */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E6E7D18CA4C5000F7F005 /* AccountMainViewController.h */,
+				0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */,
 			);
 			name = AccountMain;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
 				16DE4DBF18C589DC00FF96A2 /* SITextField.m in Sources */,
 				0F2E6E7C18CA464200F7F005 /* SIGroupedTableView.m in Sources */,
+				0F2E6E7F18CA4C5000F7F005 /* AccountMainViewController.m in Sources */,
 				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
 				0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,

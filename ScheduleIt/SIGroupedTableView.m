@@ -16,13 +16,8 @@
 }
 
 - (id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
-    return [self initWithFrame:CGRectMake(0, 0, 0, 0)];
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
+    self = [super initWithFrame:frame style:UITableViewStyleGrouped];
+    if(self){
         [self setBackgroundColor:[UIColor clearColor]];
         [self setBackgroundView:nil];
         [self setBounces:YES];
@@ -31,6 +26,11 @@
         [self setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     }
     return self;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame style:UITableViewStyleGrouped];
 }
 
 /*

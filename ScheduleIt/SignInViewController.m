@@ -8,6 +8,7 @@
 
 #import "SignInViewController.h"
 #import "RegisterViewController.h"
+#import "AccountMainViewController.h"
 
 #define signInButtonTag 1
 #define registerButtonTag 2
@@ -75,7 +76,9 @@
 - (void)signInAction{
     SIError* validInputs = [self validateInputs];
     if(validInputs == nil){
-        //sign in action
+        [[AppSessionContext singleton]setIsAUserSignedIn:YES];
+        AccountMainViewController* vcl = [[AccountMainViewController alloc]init];
+        [[self navigationController]pushViewController:vcl animated:YES];
     } else {
         [self handleError:validInputs];
     }
