@@ -7,6 +7,8 @@
 //
 
 #import "BackgroundViewController.h"
+#import "SignInViewController.h"
+#import "AccountMainViewController.h"
 
 #define navButtonBorder 8
 #define navButtonWidth 23
@@ -70,7 +72,7 @@
 
 - (void)setUpNavBar{
     [self clearNavBar];
-    BOOL isOnBaseView = [[[self navigationController]viewControllers]count] == 0;
+    BOOL isOnBaseView = [self isKindOfClass:[SignInViewController class]] || [self isKindOfClass:[AccountMainViewController class]];
     if([[AppSessionContext singleton]isAUserSignedIn]){
         if(isOnBaseView){
             [self addSignOutButtonToNavBar];
@@ -86,9 +88,13 @@
 }
 
 - (void)clearNavBar{
-    [self navigationItem].backBarButtonItem = nil;
-    [self navigationItem].leftBarButtonItem = nil;
-    [self navigationItem].rightBarButtonItem = nil;
+    [self.navigationItem setHidesBackButton:YES];
+    for (UIView* view in [[self navigationItem]rightBarButtonItems]) {
+        [view removeFromSuperview];
+    }
+    for (UIView* view in [[self navigationItem]leftBarButtonItems]) {
+        [view removeFromSuperview];
+    }
 }
 
 - (void)addBackButtonToNavBar{
@@ -107,7 +113,6 @@
     [barButton setTintColor:[UIColor whiteColor]];
     
     [self navigationItem].leftBarButtonItem = barButton;
-    //[[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
 - (void)addSignOutButtonToNavBar{
@@ -126,7 +131,6 @@
     [barButton setTintColor:[UIColor whiteColor]];
     
     [self navigationItem].leftBarButtonItem = barButton;
-    //[[self navigationItem]setLeftItemsSupplementBackButton:YES];
 }
 
 - (void)addHomeButtonToNavBar{

@@ -17,6 +17,8 @@
 		0F2E6E7C18CA464200F7F005 /* SIGroupedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7B18CA464200F7F005 /* SIGroupedTableView.m */; };
 		0F2E6E7F18CA4C5000F7F005 /* AccountMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */; };
 		0F2E6E8318CA661C00F7F005 /* AccountMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */; };
+		0F2E6E8C18CA78B600F7F005 /* chevron_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */; };
+		0F2E6E8D18CA78B600F7F005 /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8B18CA78B600F7F005 /* chevron.png */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -76,6 +78,8 @@
 		0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainViewController.m; sourceTree = "<group>"; };
 		0F2E6E8118CA661C00F7F005 /* AccountMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTableViewCell.h; sourceTree = "<group>"; };
 		0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainTableViewCell.m; sourceTree = "<group>"; };
+		0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron_hit.png; sourceTree = "<group>"; };
+		0F2E6E8B18CA78B600F7F005 /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,7 @@
 		0F2E6E5E18C646CF00F7F005 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E6E8918CA78A800F7F005 /* TableViewCells */,
 				16DE4DC318C6DC0200FF96A2 /* NavigationBar */,
 				0F2E6E5F18C646D700F7F005 /* PostAcknoledgement */,
 			);
@@ -232,6 +237,15 @@
 				0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		0F2E6E8918CA78A800F7F005 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */,
+				0F2E6E8B18CA78B600F7F005 /* chevron.png */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		0FF88BD118C1038100F08CA9 /* SignIn */ = {
@@ -468,6 +482,8 @@
 				16DE4D8618BEC9FD00FF96A2 /* InfoPlist.strings in Resources */,
 				16DE4D9118BEC9FD00FF96A2 /* Images.xcassets in Resources */,
 				16DE4DC518C6DC3400FF96A2 /* exit.png in Resources */,
+				0F2E6E8D18CA78B600F7F005 /* chevron.png in Resources */,
+				0F2E6E8C18CA78B600F7F005 /* chevron_hit.png in Resources */,
 				16DE4DCB18C6DCDE00FF96A2 /* error.png in Resources */,
 				16DE4DC918C6DC6C00FF96A2 /* back.png in Resources */,
 				16DE4DC718C6DC4F00FF96A2 /* home.png in Resources */,
