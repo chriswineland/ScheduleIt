@@ -16,6 +16,7 @@
 		0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */; };
 		0F2E6E7C18CA464200F7F005 /* SIGroupedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7B18CA464200F7F005 /* SIGroupedTableView.m */; };
 		0F2E6E7F18CA4C5000F7F005 /* AccountMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */; };
+		0F2E6E8318CA661C00F7F005 /* AccountMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -73,6 +74,8 @@
 		0F2E6E7B18CA464200F7F005 /* SIGroupedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGroupedTableView.m; sourceTree = "<group>"; };
 		0F2E6E7D18CA4C5000F7F005 /* AccountMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainViewController.h; sourceTree = "<group>"; };
 		0F2E6E7E18CA4C5000F7F005 /* AccountMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainViewController.m; sourceTree = "<group>"; };
+		0F2E6E8118CA661C00F7F005 /* AccountMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTableViewCell.h; sourceTree = "<group>"; };
+		0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainTableViewCell.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +225,15 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
+		0F2E6E8018CA655A00F7F005 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E8118CA661C00F7F005 /* AccountMainTableViewCell.h */,
+				0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		0FF88BD118C1038100F08CA9 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +322,7 @@
 		16DE4DAE18BECA1000FF96A2 /* CustomizedClasses */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E6E8018CA655A00F7F005 /* TableViewCell */,
 				0F2E6E7318C8FF1200F7F005 /* TableView */,
 				0F2E6E5018C551C100F7F005 /* TextField */,
 				0F2E6E4F18C5519E00F7F005 /* Label */,
@@ -476,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2E6E8318CA661C00F7F005 /* AccountMainTableViewCell.m in Sources */,
 				0F2E6E6A18C68C6A00F7F005 /* AppSessionContext.m in Sources */,
 				16DE4DC218C599EE00FF96A2 /* SIError.m in Sources */,
 				16DE4D8C18BEC9FD00FF96A2 /* AppDelegate.m in Sources */,
