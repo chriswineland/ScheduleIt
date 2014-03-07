@@ -71,8 +71,8 @@
     } else if([[createPasscodeField text]length] == 0 ||
               [[confermPasscodeField text]length] == 0){
         error = [[SIError alloc]initWithCode:kSIErrorCodeMissingPasscode];
-    } else if ([[createPasscodeField text]length] > 6 ||
-               [[confermPasscodeField text]length] > 6){
+    } else if ([[createPasscodeField text]length] < 6 ||
+               [[confermPasscodeField text]length] < 6){
         error = [[SIError alloc]initWithCode:kSIErrorCodeInvalidPasscodeLength];
     } else if (![[createPasscodeField text] compare:[confermPasscodeField text]] == NSOrderedSame){
         error = [[SIError alloc]initWithCode:kSIErrorCodePasscodesDoNotMatch];

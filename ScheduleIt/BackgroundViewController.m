@@ -158,10 +158,24 @@
 }
 
 - (void)signOutButtonHit{
-    //sign out operation
+    UIActionSheet* signOutActionSheet = [[UIActionSheet alloc]initWithTitle:@"Are you sure you would like to sign out?" delegate:self cancelButtonTitle:@"NO" destructiveButtonTitle:@"YES" otherButtonTitles:nil, nil];
+    [signOutActionSheet showInView:[self view]];
 }
 
 - (void)homeButtonHit{
+    [[self navigationController]popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark - uiaction sheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 0){
+        [self signOutAction];
+    }
+}
+
+- (void)signOutAction{
+    [[AppSessionContext singleton]setIsAUserSignedIn:NO];
     [[self navigationController]popToRootViewControllerAnimated:YES];
 }
 

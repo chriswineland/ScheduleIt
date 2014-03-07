@@ -96,7 +96,7 @@
         error = [[SIError alloc]initWithCode:kSIErrorCodeMissingUID];
     } else if([[passcodeField text]length] == 0){
         error = [[SIError alloc]initWithCode:kSIErrorCodeMissingPasscode];
-    } else if ([[passcodeField text]length] > 6){
+    } else if ([[passcodeField text]length] < 6){
         error = [[SIError alloc]initWithCode:kSIErrorCodeInvalidPasscodeLength];
     }
     

@@ -12,7 +12,7 @@
 #import "SIError.h"
 #import "SIPostAcknoledgement.h"
 
-@interface BackgroundViewController : UIViewController<SIPostAcknoledgementDelegate>{
+@interface BackgroundViewController : UIViewController<SIPostAcknoledgementDelegate, UIActionSheetDelegate>{
     CGFloat screenWidth;
     CGFloat screenHeight;
 }
