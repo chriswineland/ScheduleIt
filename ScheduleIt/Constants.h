@@ -12,6 +12,9 @@
 #define RGBA(r, g, b, a)         [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define RGB(r, g, b)             [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
+#define bold16FontType           [UIFont fontWithName:@"HelveticaNeue-Bold" size:16]
+#define regular18FontType        [UIFont fontWithName:@"HelveticaNeue" size:18]
+
 #define backGroundOffWhite       RGB(249,247,244)
 
 #define primaryColor1            RGB(0,76,182)

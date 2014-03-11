@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccountMainTableViewCell : UITableViewCell
+@interface AccountMainTableViewCell : UITableViewCell{
+    UIImageView* cellImage;
+    UITextView* cellTitleText;
+    UITextView* cellCountText;
+    UIView* expandContentView;
+}
 
 @end

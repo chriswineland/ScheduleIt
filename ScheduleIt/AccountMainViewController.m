@@ -7,6 +7,8 @@
 //
 
 #import "AccountMainViewController.h"
+#import "AccountMainTableViewCell.h"
+#import "AccountMainTabelViewCellData.h"
 
 @interface AccountMainViewController ()
 
@@ -18,6 +20,8 @@
 {
     [super viewDidLoad];
     [[self navigationItem]setTitle:@"Account"];
+    
+    [self setUpTableData];
     
     SItableView = [[SIGroupedTableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     [SItableView setDelegate:self];
@@ -34,12 +38,13 @@
 #pragma mark - table view data source
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *MyIdentifier = @"MyIdentifier";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
+        cell = [[AccountMainTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
     }
-    [[cell textLabel] setText:@"temp"];
+    
     return cell;
 }
 
@@ -51,6 +56,11 @@
     return 2;
 }
 
+#pragma mark - helper functions
+
+- (void)setUpTableData{
+    
+}
 
 
 @end

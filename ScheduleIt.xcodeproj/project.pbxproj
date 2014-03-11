@@ -80,6 +80,7 @@
 		0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainTableViewCell.m; sourceTree = "<group>"; };
 		0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron_hit.png; sourceTree = "<group>"; };
 		0F2E6E8B18CA78B600F7F005 /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
+		0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTabelViewCellData.h; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,6 +391,7 @@
 				16DE4DBB18BECFEB00FF96A2 /* Constants.h */,
 				0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */,
 				0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */,
+				0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
