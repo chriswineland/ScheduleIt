@@ -350,6 +350,7 @@
 		16DE4DAF18BECA2F00FF96A2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */,
 				16DE4DC018C599EE00FF96A2 /* SIError.h */,
 				16DE4DC118C599EE00FF96A2 /* SIError.m */,
 				0F2E6E7718C9205400F7F005 /* SIErrorCodes.h */,
@@ -391,7 +392,6 @@
 				16DE4DBB18BECFEB00FF96A2 /* Constants.h */,
 				0F2E6E5A18C642A500F7F005 /* SIPostAcknoledgement.h */,
 				0F2E6E5B18C642A500F7F005 /* SIPostAcknoledgement.m */,
-				0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";

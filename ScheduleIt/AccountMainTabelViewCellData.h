@@ -12,5 +12,6 @@ typedef enum{
     kProvideServiceCell,
     kSearchServiceCell,
     kProfileCalendarExpandedCell,
-    kProvideServiceExpandedCell
+    kProvideServiceExpandedCell,
+    kSearchServiceExpandedCell
 }AccountMainTableViewCellEnum;

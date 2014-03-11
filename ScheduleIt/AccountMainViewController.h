@@ -10,7 +10,12 @@
 #import "SIGroupedTableView.h"
 
 @interface AccountMainViewController : BackgroundViewController<UITableViewDelegate, UITableViewDataSource>{
-    SIGroupedTableView* SItableView;
+    SIGroupedTableView* siTableView;
+    NSMutableArray* tableData;
+    
+    BOOL profileCalendarCellExpanded;
+    BOOL provideServiceCellExpanded;
+    BOOL searchServicesCellExpanded;
 }
 
 @end

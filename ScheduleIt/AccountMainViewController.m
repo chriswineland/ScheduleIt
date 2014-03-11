@@ -23,10 +23,10 @@
     
     [self setUpTableData];
     
-    SItableView = [[SIGroupedTableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-    [SItableView setDelegate:self];
-    [SItableView setDataSource:self];
-    [[self view]addSubview:SItableView];
+    siTableView = [[SIGroupedTableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+    [siTableView setDelegate:self];
+    [siTableView setDataSource:self];
+    [[self view]addSubview:siTableView];
 }
 
 #pragma mark - table view delegate
@@ -53,14 +53,55 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if(section == 0){
+        return [self calculateRowsForZerothSection];
+    } else if(section == 1){
+        return [self calculateRowsForFirstSection];
+    }
+    return 0;
 }
 
 #pragma mark - helper functions
 
 - (void)setUpTableData{
-    
+    if(tableData == nil){
+        tableData = [[NSMutableArray alloc]initWithCapacity:0];
+    } else {
+        [tableData removeAllObjects];
+    }
+    [tableData addObject:[NSNumber numberWithInt:kProfileAndSettingsCell]];
+    [tableData addObject:[NSNumber numberWithInt:kProfileCalendarCell]];
+    if(profileCalendarCellExpanded){
+        
+    }
+    [tableData addObject:[NSNumber numberWithInt:kSearchServiceCell]];
+    if(searchServicesCellExpanded){
+        
+    }
+    [tableData addObject:[NSNumber numberWithInt:kProvideServiceCell]];
+    if(profileCalendarCellExpanded){
+        
+    }
 }
 
+-(NSInteger)calculateRowsForZerothSection{
+    NSInteger rowCount = 2;
+    for(NSNumber *num in tableData){
+        if([num integerValue] == kProvideServiceExpandedCell){
+            rowCount++;
+        }
+    }
+    return rowCount;
+}
+
+-(NSInteger)calculateRowsForFirstSection{
+    NSInteger rowCount = 2;
+    for(NSNumber *num in tableData){
+        if([num integerValue] == kSearchServiceExpandedCell || [num integerValue] == kProvideServiceExpandedCell){
+            rowCount++;
+        }
+    }
+    return rowCount;
+}
 
 @end
