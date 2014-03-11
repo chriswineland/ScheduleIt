@@ -19,6 +19,7 @@
 		0F2E6E8318CA661C00F7F005 /* AccountMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8218CA661C00F7F005 /* AccountMainTableViewCell.m */; };
 		0F2E6E8C18CA78B600F7F005 /* chevron_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */; };
 		0F2E6E8D18CA78B600F7F005 /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8B18CA78B600F7F005 /* chevron.png */; };
+		0F2E6E9518CFC13C00F7F005 /* AccountMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E9418CFC13C00F7F005 /* AccountMainTableViewController.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron_hit.png; sourceTree = "<group>"; };
 		0F2E6E8B18CA78B600F7F005 /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTabelViewCellData.h; sourceTree = "<group>"; };
+		0F2E6E9318CFC13C00F7F005 /* AccountMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTableViewController.h; sourceTree = "<group>"; };
+		0F2E6E9418CFC13C00F7F005 /* AccountMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainTableViewController.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +252,15 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		0F2E6E9218CFC10900F7F005 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E6E9318CFC13C00F7F005 /* AccountMainTableViewController.h */,
+				0F2E6E9418CFC13C00F7F005 /* AccountMainTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		0FF88BD118C1038100F08CA9 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,13 +306,14 @@
 		16DE4D8118BEC9FD00FF96A2 /* ScheduleIt */ = {
 			isa = PBXGroup;
 			children = (
+				16DE4DB118BECA3E00FF96A2 /* Base */,
+				16DE4DAF18BECA2F00FF96A2 /* Domain */,
+				0F2E6E9218CFC10900F7F005 /* Controllers */,
+				16DE4DAE18BECA1000FF96A2 /* CustomizedClasses */,
 				0F2E6E5D18C646C800F7F005 /* Resources */,
 				16DE4DB718BECDD300FF96A2 /* Shared */,
-				16DE4DB118BECA3E00FF96A2 /* Base */,
-				16DE4DB018BECA3700FF96A2 /* Controllers */,
-				16DE4DAF18BECA2F00FF96A2 /* Domain */,
-				16DE4DAE18BECA1000FF96A2 /* CustomizedClasses */,
 				16DE4D8218BEC9FD00FF96A2 /* Supporting Files */,
+				16DE4DB018BECA3700FF96A2 /* ViewControllers */,
 			);
 			path = ScheduleIt;
 			sourceTree = "<group>";
@@ -362,14 +375,14 @@
 			name = Domain;
 			sourceTree = "<group>";
 		};
-		16DE4DB018BECA3700FF96A2 /* Controllers */ = {
+		16DE4DB018BECA3700FF96A2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0F2E6E7218C8E84E00F7F005 /* UserProfile */,
 				0F2E6E7118C8E83700F7F005 /* AccountMain */,
 				0FF88BD118C1038100F08CA9 /* SignIn */,
 			);
-			name = Controllers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		16DE4DB118BECA3E00FF96A2 /* Base */ = {
@@ -519,6 +532,7 @@
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
 				0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */,
+				0F2E6E9518CFC13C00F7F005 /* AccountMainTableViewController.m in Sources */,
 				0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */,
 				16F3C4E618C6F81800F41C24 /* RegisterViewController.m in Sources */,
 				0F2E6E4718C5135700F7F005 /* SIScrollView.m in Sources */,

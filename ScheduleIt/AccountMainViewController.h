@@ -11,11 +11,7 @@
 
 @interface AccountMainViewController : BackgroundViewController<UITableViewDelegate, UITableViewDataSource>{
     SIGroupedTableView* siTableView;
-    NSMutableArray* tableData;
-    
-    BOOL profileCalendarCellExpanded;
-    BOOL provideServiceCellExpanded;
-    BOOL searchServicesCellExpanded;
+
 }
 
 @end

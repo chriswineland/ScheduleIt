@@ -8,7 +8,6 @@
 
 #import "AccountMainTableViewCell.h"
 #import "Constants.h"
-#import "AccountMainTabelViewCellData.h"
 
 #define cellImageFrame CGRectMake(11,11,23,23)
 
