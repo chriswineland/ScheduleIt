@@ -53,6 +53,10 @@
 #pragma mark - sibutton delegate
 
 - (void)siButtonWasPressed:(id)sender{
+    [createUITTextField resignFirstResponder];
+    [createPasscodeField resignFirstResponder];
+    [confermPasscodeField resignFirstResponder];
+    
     SIError* validInputs = [self validateInputs];
     if(validInputs == nil){
         //registure action
