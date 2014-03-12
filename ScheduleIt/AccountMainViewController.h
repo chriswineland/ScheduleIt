@@ -8,10 +8,11 @@
 
 #import "BackgroundViewController.h"
 #import "SIGroupedTableView.h"
+#import "AccountMainTableViewDataSource.h"
 
-@interface AccountMainViewController : BackgroundViewController<UITableViewDelegate, UITableViewDataSource>{
+@interface AccountMainViewController : BackgroundViewController<UITableViewDelegate>{
     SIGroupedTableView* siTableView;
-
+    AccountMainTableViewDataSource* tableViewDataSourse;
 }
 
 @end

@@ -52,9 +52,16 @@
     [[self view]addSubview:contentView];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [uidTextField setText:@""];
+    [passcodeField setText:@""];
+}
+
 #pragma mark - SIButton Delegate
 
 - (void)siButtonWasPressed:(id)sender{
+    [uidTextField resignFirstResponder];
+    [passcodeField resignFirstResponder];
     if([sender tag] == signInButtonTag){
         SIError* error = [self validateInputs];
         if(error){
