@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SIUserProfile.h"
 
 @interface UserSessionContext : NSObject{
-    //userProfile
-    //listOfApointments
-    //listOfServices
+    SIUserProfile* userProfile;
+    NSMutableArray* apointments;
+    NSMutableArray* favoriteServices;
+    NSMutableArray* servicesOffered;
 }
 
 +(id)singleton;

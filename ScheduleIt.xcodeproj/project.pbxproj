@@ -20,6 +20,7 @@
 		0F2E6E8C18CA78B600F7F005 /* chevron_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8A18CA78B600F7F005 /* chevron_hit.png */; };
 		0F2E6E8D18CA78B600F7F005 /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2E6E8B18CA78B600F7F005 /* chevron.png */; };
 		0F2E6E9518CFC13C00F7F005 /* AccountMainTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E6E9418CFC13C00F7F005 /* AccountMainTableViewDataSource.m */; };
+		0F42336018EA33350080C48F /* SIUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F42335F18EA33350080C48F /* SIUserProfile.m */; };
 		0FF88BD418C103EA00F08CA9 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF88BD318C103EA00F08CA9 /* SignInViewController.m */; };
 		16DE4D7A18BEC9FD00FF96A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7918BEC9FD00FF96A2 /* Foundation.framework */; };
 		16DE4D7C18BEC9FD00FF96A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE4D7B18BEC9FD00FF96A2 /* CoreGraphics.framework */; };
@@ -84,6 +85,8 @@
 		0F2E6E8E18CFAC4F00F7F005 /* AccountMainTabelViewCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTabelViewCellData.h; sourceTree = "<group>"; };
 		0F2E6E9318CFC13C00F7F005 /* AccountMainTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMainTableViewDataSource.h; sourceTree = "<group>"; };
 		0F2E6E9418CFC13C00F7F005 /* AccountMainTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMainTableViewDataSource.m; sourceTree = "<group>"; };
+		0F42335E18EA33350080C48F /* SIUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIUserProfile.h; sourceTree = "<group>"; };
+		0F42335F18EA33350080C48F /* SIUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIUserProfile.m; sourceTree = "<group>"; };
 		0FF88BD218C103EA00F08CA9 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0FF88BD318C103EA00F08CA9 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		16DE4D7618BEC9FD00FF96A2 /* ScheduleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,6 +374,8 @@
 				0F2E6E6618C68C4800F7F005 /* UserSessionContext.m */,
 				0F2E6E6818C68C6A00F7F005 /* AppSessionContext.h */,
 				0F2E6E6918C68C6A00F7F005 /* AppSessionContext.m */,
+				0F42335E18EA33350080C48F /* SIUserProfile.h */,
+				0F42335F18EA33350080C48F /* SIUserProfile.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				0F2E6E4118C4FCE700F7F005 /* SIButton.m in Sources */,
 				0F2E6E5C18C642A500F7F005 /* SIPostAcknoledgement.m in Sources */,
 				16DE4D8F18BEC9FD00FF96A2 /* ScheduleIt.xcdatamodeld in Sources */,
+				0F42336018EA33350080C48F /* SIUserProfile.m in Sources */,
 				16DE4DBA18BECEFE00FF96A2 /* BackgroundViewController.m in Sources */,
 				0F2E6E5618C5530800F7F005 /* SILabelTextBlock.m in Sources */,
 				0F2E6E9518CFC13C00F7F005 /* AccountMainTableViewDataSource.m in Sources */,

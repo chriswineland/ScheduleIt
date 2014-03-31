@@ -8,6 +8,7 @@
 
 #import "AccountMainTableViewDataSource.h"
 #import "AccountMainTabelViewCellData.h"
+#import "AccountMainTabelViewCellData.h"
 
 @implementation AccountMainTableViewDataSource{
     
@@ -42,13 +43,11 @@
 
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *MyIdentifier = @"MyIdentifier";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
+    if(indexPath.section == 0){
+        return [self tableView:tableView getProfileTableViewCellForRow:indexPath.row];
+    } else {
+        return [self tableView:tableView getServiceTableViewCellForRow:indexPath.row];
     }
-    
-    return cell;
 }
 
 #pragma mark - helper functions
@@ -58,6 +57,26 @@
 
 - (void)createServiceTableViewCells{
     
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView getProfileTableViewCellForRow:(NSInteger)row{
+    static NSString *MyIdentifier = @"MyIdentifier";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
+    }
+    
+    return cell;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView getServiceTableViewCellForRow:(NSInteger)row{
+    static NSString *MyIdentifier = @"MyIdentifier";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
+    }
+    
+    return cell;
 }
 
 #pragma mark - accessor functions
